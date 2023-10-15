@@ -134,9 +134,8 @@ GameObject:
   - component: {fileID: 37807756}
   - component: {fileID: 37807755}
   - component: {fileID: 37807753}
-  - component: {fileID: 37807754}
-  - component: {fileID: 37807757}
   - component: {fileID: 37807758}
+  - component: {fileID: 37807757}
   m_Layer: 0
   m_Name: testhero
   m_TagString: Untagged
@@ -171,41 +170,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!70 &37807754
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 37807752}
-  m_Enabled: 0
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.017104626, y: -0.041516654}
-  m_Size: {x: 0.098353386, y: 0.55198705}
-  m_Direction: 0
 --- !u!212 &37807755
 SpriteRenderer:
   m_ObjectHideFlags: 0

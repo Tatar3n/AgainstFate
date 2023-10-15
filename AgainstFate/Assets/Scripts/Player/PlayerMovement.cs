@@ -5,7 +5,6 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     private Rigidbody2D _rigidbody; // компонент rididbody
-    private Collider2D _collider;
     private Vector2 _horizontalVelocity; // вектор(скорость) джижения
     private float _horizontalSpeed; // направление движения
 
@@ -16,7 +15,6 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         _rigidbody = GetComponent<Rigidbody2D>(); // получаем объект Rigidbody игрока
-        _collider = GetComponent<Collider2D>();
     }
 
     // Update is called once per frame
@@ -49,7 +47,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Jump()
     {
-        if (Input.GetKeyDown(KeyCode.Space)) 
+        if (Input.GetKeyDown(KeyCode.Space))
             _rigidbody.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
     }
 }
