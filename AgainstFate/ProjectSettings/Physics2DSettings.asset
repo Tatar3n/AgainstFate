@@ -18,7 +18,7 @@ Physics2DSettings:
   m_TimeToSleep: 0.5
   m_LinearSleepTolerance: 0.01
   m_AngularSleepTolerance: 2
-  m_DefaultContactOffset: 0.0001
+  m_DefaultContactOffset: 0.005
   m_JobOptions:
     serializedVersion: 2
     useMultithreading: 0
@@ -44,5 +44,5 @@ Physics2DSettings:
   m_CallbacksOnDisable: 1
   m_ReuseCollisionCallbacks: 1
   m_AutoSyncTransforms: 0
-  m_GizmoOptions: 10
+  m_GizmoOptions: -54
   m_LayerCollisionMatrix: ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
