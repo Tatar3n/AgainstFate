@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/PrologueVideo.unity
+    guid: 0056cb1c7bebb2a47844d52723992480
+  - enabled: 1
     path: Assets/Scenes/TestWalk.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    guid: babc1c08dd125f44a91830d859ccdf30
   m_configObjects: {}
