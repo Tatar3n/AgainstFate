@@ -9,7 +9,7 @@ public class SavePoint : MonoBehaviour
     private void Awake()
     {
         animator = GetComponent<Animator>();
-        //SetActiveSavePoint(false);//???
+        SetActiveSavePoint(false);
     }
 
     public void SetActiveSavePoint(bool value)
