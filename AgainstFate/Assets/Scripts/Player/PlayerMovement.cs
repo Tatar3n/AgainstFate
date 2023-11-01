@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     private BoxCollider2D _boxCollider;
     private Vector2 _horizontalVelocity; // вектор(скорость) джижения
     private float _horizontalSpeed; // направление движения
+    public Animator animator;//переменная для переключения анимаций
 
     public float moveSpeed; // множитель скорости 
     public float jumpForce; // множитель прыжка
@@ -25,6 +26,13 @@ public class PlayerMovement : MonoBehaviour
     {
         _horizontalSpeed = Input.GetAxis("Horizontal");
         Jump();
+
+        animator.SetFloat("_horizontalSpeed", Mathf.Abs(_horizontalSpeed));
+        if (IsGrounded() == false)
+            animator.SetBool("Jumping", true);
+        else
+            animator.SetBool("Jumping", false);
+
     }
 
     // Здесь будет происходить перерасчёт физики
