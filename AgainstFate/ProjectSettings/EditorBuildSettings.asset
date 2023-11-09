@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/PrologueVideo.unity
     guid: 0056cb1c7bebb2a47844d52723992480
   - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 2cde01425907d8341ad47998a9fe113e
+  - enabled: 1
     path: Assets/Scenes/TestWalk.unity
-    guid: babc1c08dd125f44a91830d859ccdf30
+    guid: 04daa734311d7f242aa970d342b5e077
   m_configObjects: {}
