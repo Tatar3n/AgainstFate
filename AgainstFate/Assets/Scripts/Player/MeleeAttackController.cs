@@ -30,7 +30,7 @@ public class MeleeAttackController : MonoBehaviour
 
         foreach (Collider2D enemy in enemies)
         {
-            enemy.GetComponent<HP>().Damaging(standartDamage);
+            enemy.GetComponent<EnemyHP>().Damaging(standartDamage);
             Debug.Log(enemy + " Ударил");
         }
     }

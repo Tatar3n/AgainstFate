@@ -74,6 +74,8 @@ public class PlayerMovement : MonoBehaviour
         //Debug.Log(checkGround.collider);
         return checkGround.collider != null;
     }
+
+    
 }
 
 
