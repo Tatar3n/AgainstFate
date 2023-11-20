@@ -9,6 +9,8 @@ public class Zero : MonoBehaviour
     public GameObject button;
     public GameObject Snake;
     public GameObject skipping;
+    public GameObject namepanel;
+    public GameObject name;
     public string[] message;
 
     [SerializeField] TextMeshProUGUI text;
@@ -44,6 +46,8 @@ public class Zero : MonoBehaviour
         Snake.SetActive(true);
         panelDialog.SetActive(true);
         skipping.SetActive(true);
+        namepanel.SetActive(true);
+        name.SetActive(true);
        // button.SetActive(true);
         
     }
@@ -70,6 +74,8 @@ public class Zero : MonoBehaviour
             panelDialog.SetActive(false);
             Snake.SetActive(false);
             skipping.SetActive(false) ;
+            namepanel.SetActive(false); 
+            name.SetActive(false);
         }
 
     }
