@@ -412,7 +412,7 @@ TextureImporter:
         width: 64
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -420,6 +420,90 @@ TextureImporter:
       bones: []
       spriteID: 0ab4882ccaf0e4345aa7afa2ed6db491
       internalID: -365655237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Traps_15
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 160
+        width: 40
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3dcc94f03dbf259478caf006f2f7d306
+      internalID: 564064600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Traps_16
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 160
+        width: 40
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b0a79e36349b9a4a8751c9f61bd195b
+      internalID: -206121876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Traps_17
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 160
+        width: 40
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bf6181c8cebb6b408ddc8b496934aa4
+      internalID: 642408200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Traps_18
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 160
+        width: 40
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7875cde77195774e9f6e986ee4b587a
+      internalID: -1707186228
       vertices: []
       indices: 
       edges: []
@@ -442,6 +526,10 @@ TextureImporter:
       Traps_12: -566184111
       Traps_13: 1143458232
       Traps_14: -365655237
+      Traps_15: 564064600
+      Traps_16: -206121876
+      Traps_17: 642408200
+      Traps_18: -1707186228
       Traps_2: 1991276872
       Traps_3: -506734555
       Traps_4: 2041863446
