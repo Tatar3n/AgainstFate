@@ -30,6 +30,7 @@ public class CloseZero : MonoBehaviour
             namepanel.SetActive(false);
             name.SetActive(false);
             tmp.SetActive(false);
+            
         }
     }
     // Update is called once per frame
