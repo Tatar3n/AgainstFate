@@ -26,7 +26,7 @@ public class FallingPlatform : MonoBehaviour
     void FallPlatform()
     {
         rb.isKinematic = false;
-        Invoke("BackPlatform", 5f);
+        Invoke("BackPlatform", 2f);
     }
 
     void BackPlatform()
