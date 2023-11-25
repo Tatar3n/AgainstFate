@@ -8,24 +8,41 @@ public class CheckAttackCaves : MonoBehaviour
     public UnityAction<GameObject> check;
     public Transform parent;
     private bool isAttack;
+    private int countDead;
+    public bool isEnd;
+
+	private void Start()
+	{
+        isEnd = false;
+	}
 
 	private void Update()
 	{
-        ForeachToAllChild(parent, (Transform child) =>
+        if (!isEnd)
         {
-            if (!isAttack && !child.GetComponent<CaveThrowBullet>().isDead)
-                isAttack = child.GetComponent<CaveThrowBullet>().IsAttack();
-        });
-        if(!isAttack)
             ForeachToAllChild(parent, (Transform child) =>
             {
+                if (child.GetComponent<CaveThrowBullet>().isDead)
+                    countDead++;
+
                 if (!isAttack && !child.GetComponent<CaveThrowBullet>().isDead)
-                {
-                    isAttack = true;
-                    child.GetComponent<CaveThrowBullet>().isAttack = true;
-                }
+                    isAttack = child.GetComponent<CaveThrowBullet>().IsAttack();
+                Debug.Log(countDead);
+                if (countDead == 6)
+                    isEnd = true;
             });
-        isAttack = false;
+            countDead = 0;
+            if (!isAttack)
+                ForeachToAllChild(parent, (Transform child) =>
+                {
+                    if (!isAttack && !child.GetComponent<CaveThrowBullet>().isDead)
+                    {
+                        isAttack = true;
+                        child.GetComponent<CaveThrowBullet>().isAttack = true;
+                    }
+                });
+            isAttack = false;
+        }
 	}
 
     private void ForeachToAllChild(Transform parent, UnityAction<Transform> action)

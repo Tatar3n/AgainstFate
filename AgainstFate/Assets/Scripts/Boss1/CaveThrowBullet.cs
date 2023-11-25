@@ -23,6 +23,9 @@ public class CaveThrowBullet : MonoBehaviour
             isAttack = false;
 
         if (isAttack)
+            gameObject.layer = 8;
+
+        if (isAttack)
         {
             updateTime -= Time.deltaTime;
             attackTime -= Time.deltaTime;
