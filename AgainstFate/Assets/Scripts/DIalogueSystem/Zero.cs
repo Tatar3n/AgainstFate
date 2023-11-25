@@ -6,7 +6,7 @@ using TMPro;
 public class Zero : MonoBehaviour
 {
     public GameObject panelDialog;
-    public GameObject button;
+    public Button myButton;
     public GameObject Snake;
     public GameObject skipping;
     public GameObject namepanel;
@@ -17,15 +17,22 @@ public class Zero : MonoBehaviour
 
     [SerializeField] float TextSpeed;
     private int index;
+    /*
+    private void myButton_Click(object sender, EventArgs e)
+    { }
+    */
     void Start()
     {
         text.text = string.Empty;
+        //myButton.onClick.AddListener(MouseClick);
+        //myButton.Click += new EventHandler(myButton_Click);
+        //Controls.Add(myButton);
         StartDialog();
 
     }
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetKey(KeyCode.N))
         {
             if (text.text == message[index])
             {
