@@ -9,8 +9,8 @@ public class MeleeAttackController : MonoBehaviour
 
     public float attackRange = 0.32f;
     public float standartDamage = 15f;
-
-
+    public Animator animator;//переменная для переключения анимаций
+    bool isAttacking = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,7 +21,13 @@ public class MeleeAttackController : MonoBehaviour
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.F))
+        {
+            isAttacking = true;
             Attack();
+            animator.Play("Fight");
+            StartCoroutine(DoAttack());
+            //Invoke("ResetFight", 5f);
+        }
     }
 
     private void Attack()
@@ -41,4 +47,13 @@ public class MeleeAttackController : MonoBehaviour
 	{
         Gizmos.DrawWireSphere(attackPoint.position, attackRange);
     }
+    IEnumerator DoAttack()
+    {
+        //attackHitBox.SetActive(true);
+        yield return new WaitForSeconds(1f);
+        //attackHitBox.SetActive(false);
+
+        isAttacking = false;
+    }
+
 }
