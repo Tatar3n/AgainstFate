@@ -23,10 +23,10 @@ public class CaveThrowBullet : MonoBehaviour
             isAttack = false;
 
         if (isAttack)
-            gameObject.layer = 8;
-
-        if (isAttack)
         {
+            gameObject.layer = 8;
+            gameObject.GetComponent<SpriteRenderer>().enabled = true;
+
             updateTime -= Time.deltaTime;
             attackTime -= Time.deltaTime;
             if (updateTime < 0)
@@ -43,6 +43,10 @@ public class CaveThrowBullet : MonoBehaviour
                     i = 0;
                 }
             }
+        }
+        else
+        {
+            gameObject.GetComponent<SpriteRenderer>().enabled = false;
         }
     }
 

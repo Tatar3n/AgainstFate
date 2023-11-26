@@ -10,6 +10,7 @@ public class CheckAttackCaves : MonoBehaviour
     private bool isAttack;
     private int countDead;
     public bool isEnd;
+    public float timerBetweenAttacks = 6.5f;
 
 	private void Start()
 	{
@@ -33,6 +34,10 @@ public class CheckAttackCaves : MonoBehaviour
             });
             countDead = 0;
             if (!isAttack)
+                timerBetweenAttacks -= Time.deltaTime;
+            else timerBetweenAttacks = 6.5f;
+            if (timerBetweenAttacks < 0)
+            {
                 ForeachToAllChild(parent, (Transform child) =>
                 {
                     if (!isAttack && !child.GetComponent<CaveThrowBullet>().isDead)
@@ -41,6 +46,8 @@ public class CheckAttackCaves : MonoBehaviour
                         child.GetComponent<CaveThrowBullet>().isAttack = true;
                     }
                 });
+
+            }
             isAttack = false;
         }
 	}

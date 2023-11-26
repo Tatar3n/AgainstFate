@@ -6,8 +6,9 @@ public class FakeFloor : MonoBehaviour
 {
 	[SerializeField] private GameObject obj;
 
-	private void OnCollisionEnter2D(Collision2D collision)
+	public void Activate()
 	{
-			obj.SetActive(false);
+		obj.SetActive(false);
 	}
+	
 }
