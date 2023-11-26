@@ -32,7 +32,7 @@ public class Zero : MonoBehaviour
     }
     void Update()
     {
-        if (Input.GetKey(KeyCode.N))
+        if (Input.GetKeyDown(KeyCode.N))
         {
             if (text.text == message[index])
             {
