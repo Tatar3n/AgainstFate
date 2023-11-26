@@ -250,6 +250,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  playerHP: {fileID: 0}
 --- !u!114 &8535754001470080052
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -268,6 +269,7 @@ MonoBehaviour:
     m_Bits: 128
   attackRange: 0.16
   standartDamage: 15
+  animator: {fileID: 557087747354306902}
 --- !u!95 &557087747354306902
 Animator:
   serializedVersion: 5
