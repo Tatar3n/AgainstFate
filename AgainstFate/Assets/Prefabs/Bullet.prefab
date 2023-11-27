@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 8968818425740719410}
   - component: {fileID: 6972697296998637943}
   - component: {fileID: 8671807453363117866}
+  - component: {fileID: -2437750697963171170}
+  - component: {fileID: 7050877035458681958}
   m_Layer: 0
   m_Name: Bullet
   m_TagString: Untagged
@@ -76,8 +78,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 138671036f8cf144b81330136bd1a535, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -162,3 +164,31 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
+--- !u!114 &-2437750697963171170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5193095831450452219}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 672e38174871f344683b27fbee40c349, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageCount: 10
+  timeReLoad: 1
+--- !u!114 &7050877035458681958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5193095831450452219}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 672e38174871f344683b27fbee40c349, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageCount: 5
+  timeReLoad: 1

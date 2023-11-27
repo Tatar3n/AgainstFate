@@ -321,7 +321,7 @@ RectTransform:
   m_GameObject: {fileID: 4079777774266952524}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -4.166619}
-  m_LocalScale: {x: 1.8, y: 1.8, z: 1.8}
+  m_LocalScale: {x: 2.49, y: 1.98, z: 1.8}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7515358253930555204}
@@ -929,6 +929,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 8354783567523775344}
   pauseButton: {fileID: 6000302608278930646}
+  dialog: {fileID: 0}
 --- !u!1 &8600368831234740032
 GameObject:
   m_ObjectHideFlags: 0
@@ -963,7 +964,7 @@ RectTransform:
   - {fileID: 7515358253930555204}
   - {fileID: 1456324964560315699}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}

@@ -20,13 +20,16 @@ public class Five_Boss : MonoBehaviour
     [SerializeField] float TextSpeed;
     public GameObject SnakeCname;
     public GameObject SagittariusName;
+   
+    
+    //public GameObject playerMovement;
 
     private int index = 1;
     private bool flag = true;
     private string[] messages = { "ќчень смело с твоей стороны вновь по€витьс€ здесь, друг.",//0
             "“ы правда настолько глуп, что решил, что € пропущу теб€ наверх?", //1
         "„то? ƒа что € вам всем сделал? ", //2
-        "“ы хоть представл€ешь, сколько всего € преодолел, чтобы вернутс€?",//3
+        "“ы хоть представл€ешь, сколько всего € преодолел, чтобы вернутьс€?",//3
     "“ы думаешь, мне есть до этого дело? ",//4
         "√ороскоп предсказывал, что нам суждено было встретитьс€ вновь.\n" ,
             " Ќадеюсь, ты вдоволь насладилс€ жизнью среди людей. ",//5
@@ -35,14 +38,16 @@ public class Five_Boss : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
+     
         index= 0;
     }
     private void OnTriggerEnter2D(Collider2D coll)
     {
         if (coll.tag == "Player" && flag)
         {
-            Time.timeScale = 0;
-            //DialStart = true;
+           
+          
             flag = false;
             SagittariusImage.SetActive(true);
             SagittariusName.SetActive(true);
@@ -54,6 +59,7 @@ public class Five_Boss : MonoBehaviour
         }
     }
     // Update is called once per frame
+   
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.N))
@@ -67,6 +73,7 @@ public class Five_Boss : MonoBehaviour
             }
             else
             {
+               
                 Sagittarius.text = "";
                 SnakeC.text = "";
                 SagittariusImage.SetActive(false);
@@ -74,7 +81,9 @@ public class Five_Boss : MonoBehaviour
                 SagittariusNamePanel.SetActive(false);
                 SagittariusPanelWord.SetActive(false);
                 SkippingSagittarius.SetActive(false) ;
-                Time.timeScale = 1;
+                //anim.SetActive(true);
+                //playerMovement.SetActive(true);
+                
             }
         }
     }
