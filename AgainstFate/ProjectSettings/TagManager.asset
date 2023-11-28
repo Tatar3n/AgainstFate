@@ -5,6 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - Walls
+  - platform
+  - MUSIC_VOLUME_SLIDER
+  - MUSIC_VOLUME_EXIST
+  - MUSIC_VOLUME_TEXT
+  - MUSIC_PLAY_VOLUME_EXIST
   layers:
   - Default
   - TransparentFX
