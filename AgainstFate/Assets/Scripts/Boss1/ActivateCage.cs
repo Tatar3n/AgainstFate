@@ -15,7 +15,7 @@ public class ActivateCage : MonoBehaviour
 
     void Update()
     {
-        if (gameObject.GetComponent<CheckAttackCaves>().timerBetweenAttacks != 6.5f)
+        if (gameObject.GetComponent<CheckAttackCaves>().timerBetweenAttacks != 6.5f && !gameObject.GetComponent<CheckAttackCaves>().isEnd)
         {
             timeToActivate -= Time.deltaTime;
             if (timeToActivate < 0)
@@ -24,6 +24,7 @@ public class ActivateCage : MonoBehaviour
                 wall2.SetActive(true);
                 timeToActivate = 1f;
             }
+
         }
         else
         {

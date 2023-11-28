@@ -13,6 +13,7 @@ public class Five_Boss : MonoBehaviour
     public GameObject SagittariusNamePanel;
     public GameObject SkippingSagittarius;
     public GameObject SkippingSnakeCarrier;
+    public SpriteRenderer sagitarius;
     //[SerializeField] TextMeshProUGUI text1;
     public Text SnakeC;
     public Text Sagittarius;
@@ -73,6 +74,7 @@ public class Five_Boss : MonoBehaviour
             }
             else
             {
+                sagitarius.enabled = false;
                 player.isDialog = false;
                 Sagittarius.text = "";
                 SnakeC.text = "";
