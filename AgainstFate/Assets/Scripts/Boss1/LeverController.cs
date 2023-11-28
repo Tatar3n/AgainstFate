@@ -5,11 +5,19 @@ using UnityEngine.Events;
 
 public class LeverController : MonoBehaviour
 {
-	public GameObject obj;
-
-	private void OnTriggerStay2D(Collider2D collision)
+	SpriteRenderer sp;
+    public Sprite open_lever;
+    public bool _fall = false;
+    private void Start()
+    {
+        sp = GetComponent<SpriteRenderer>();
+    }
+    private void OnTriggerStay2D(Collider2D collision)
 	{
 		if (Input.GetKeyDown(KeyCode.E))
-			obj.GetComponent<FakeFloor>().Activate();
+        {
+			_fall = true;
+            sp.sprite = open_lever;
+        }			
 	}
 }

@@ -23,10 +23,12 @@ public class MovingPlatformUpDown : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        collision.gameObject.transform.SetParent(gameObject.transform);
+        if (collision.tag == "Player")
+            collision.gameObject.transform.SetParent(gameObject.transform);
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        collision.gameObject.transform.SetParent(null);
+        if (collision.tag == "Player")
+            collision.gameObject.transform.SetParent(null);
     }
 }
