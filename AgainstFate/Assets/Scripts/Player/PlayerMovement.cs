@@ -10,6 +10,7 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 _horizontalVelocity; // вектор(скорость) джижения
     private float _horizontalSpeed; // направление движения
     public Animator animator;//переменная для переключения анимаций
+    public bool isFreezing = false;
 
     public float moveSpeed; // множитель скорости 
     public float jumpForce; // множитель прыжка
@@ -25,9 +26,14 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(isDialog)
+        if (isDialog)
         {
             _rigidbody.constraints = RigidbodyConstraints2D.FreezeAll;
+            animator.SetFloat("_horizontalSpeed", 0);
+            animator.SetBool("Jumping", false);
+        }
+        else if (isFreezing)
+        {
             animator.SetFloat("_horizontalSpeed", 0);
             animator.SetBool("Jumping", false);
         }
@@ -35,14 +41,17 @@ public class PlayerMovement : MonoBehaviour
         {
             _rigidbody.constraints = RigidbodyConstraints2D.None;
             _rigidbody.constraints = RigidbodyConstraints2D.FreezeRotation;
-            animator.enabled = true;
-            _horizontalSpeed = Input.GetAxis("Horizontal");
-            Jump();
-            animator.SetFloat("_horizontalSpeed", Mathf.Abs(_horizontalSpeed));
-            if (IsGrounded() == false)
-                animator.SetBool("Jumping", true);
-            else
-                animator.SetBool("Jumping", false);
+            if (!isFreezing)
+            {
+                animator.enabled = true;
+                _horizontalSpeed = Input.GetAxis("Horizontal");
+                Jump();
+                animator.SetFloat("_horizontalSpeed", Mathf.Abs(_horizontalSpeed));
+                if (IsGrounded() == false)
+                    animator.SetBool("Jumping", true);
+                else
+                    animator.SetBool("Jumping", false);
+            }
         }
 
     }
@@ -50,8 +59,11 @@ public class PlayerMovement : MonoBehaviour
     // Здесь будет происходить перерасчёт физики
     private void FixedUpdate()
     {
-        Move();
-        Flip();
+        if (!isFreezing)
+        {
+            Move();
+            Flip();
+        }
     }
 
     private void Move()
@@ -70,7 +82,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Jump()
     {
-        if (IsGrounded() && Input.GetKeyDown(KeyCode.Space))
+        if (IsGrounded() && Input.GetKeyDown(KeyCode.W))
             _rigidbody.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
     }
 
