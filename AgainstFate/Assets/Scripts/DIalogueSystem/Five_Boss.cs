@@ -20,8 +20,8 @@ public class Five_Boss : MonoBehaviour
     [SerializeField] float TextSpeed;
     public GameObject SnakeCname;
     public GameObject SagittariusName;
-   
-    
+
+    public PlayerMovement player;
     //public GameObject playerMovement;
 
     private int index = 1;
@@ -46,8 +46,8 @@ public class Five_Boss : MonoBehaviour
     {
         if (coll.tag == "Player" && flag)
         {
-           
-          
+
+            player.isDialog = true;
             flag = false;
             SagittariusImage.SetActive(true);
             SagittariusName.SetActive(true);
@@ -73,7 +73,7 @@ public class Five_Boss : MonoBehaviour
             }
             else
             {
-               
+                player.isDialog = false;
                 Sagittarius.text = "";
                 SnakeC.text = "";
                 SagittariusImage.SetActive(false);

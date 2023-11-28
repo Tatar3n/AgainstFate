@@ -14,6 +14,7 @@ public class PlayerMovement : MonoBehaviour
     public float moveSpeed; // множитель скорости 
     public float jumpForce; // множитель прыжка
 
+    public bool isDialog = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,14 +25,25 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        _horizontalSpeed = Input.GetAxis("Horizontal");
-        Jump();
-
-        animator.SetFloat("_horizontalSpeed", Mathf.Abs(_horizontalSpeed));
-        if (IsGrounded() == false)
-            animator.SetBool("Jumping", true);
-        else
+        if(isDialog)
+        {
+            _rigidbody.constraints = RigidbodyConstraints2D.FreezeAll;
+            animator.SetFloat("_horizontalSpeed", 0);
             animator.SetBool("Jumping", false);
+        }
+        else
+        {
+            _rigidbody.constraints = RigidbodyConstraints2D.None;
+            _rigidbody.constraints = RigidbodyConstraints2D.FreezeRotation;
+            animator.enabled = true;
+            _horizontalSpeed = Input.GetAxis("Horizontal");
+            Jump();
+            animator.SetFloat("_horizontalSpeed", Mathf.Abs(_horizontalSpeed));
+            if (IsGrounded() == false)
+                animator.SetBool("Jumping", true);
+            else
+                animator.SetBool("Jumping", false);
+        }
 
     }
 
