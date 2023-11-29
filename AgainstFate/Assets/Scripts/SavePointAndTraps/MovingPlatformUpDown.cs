@@ -8,6 +8,7 @@ public class MovingPlatformUpDown : MonoBehaviour
     float speed = 1f;
     public float pos1;
     public float pos2;
+   
     private void FixedUpdate()
     {
         if (transform.position.y > pos1)
@@ -24,11 +25,17 @@ public class MovingPlatformUpDown : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Player")
+        {
             collision.gameObject.transform.SetParent(gameObject.transform);
+           
+        }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.tag == "Player")
+        {
             collision.gameObject.transform.SetParent(null);
+            
+        }
     }
 }

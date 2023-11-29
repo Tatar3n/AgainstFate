@@ -6,7 +6,7 @@ public class PlatformLiftUp : MonoBehaviour
 {
     public MovingPlatformUpDown m;
     public float stoppos;
-   
+    public PlayerMovement player;
     private void FixedUpdate()
     {
         if (transform.position.y >= stoppos)
@@ -21,7 +21,7 @@ public class PlatformLiftUp : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             m.enabled = true;
-           
+            player.isDialog = true;
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
@@ -30,7 +30,7 @@ public class PlatformLiftUp : MonoBehaviour
         {
 
             m.enabled = false;
-         
+            player.isDialog = false;
         }
     }
 }
