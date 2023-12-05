@@ -47,6 +47,7 @@ public class Six_Boss : MonoBehaviour
         "Пойдем дальше. Надеюсь, земные друзья будут больше рады встрече с нами."//snake 7
 
     };
+   
     //private int=
     void Start()
     {
