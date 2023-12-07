@@ -9,7 +9,7 @@ public class Three : MonoBehaviour
     public GameObject NamePanel;
     public GameObject Name;
     public Text dialog;
-    public string message = "Кажется мы в тупике... \n Давай попробуем пойти другим путем!";
+    public string message = "Кажется мы в тупике... \nДавай попробуем пойти другим путем!";
     public bool DialStart = false;
     public bool flag = true;
     // Start is called before the first frame update

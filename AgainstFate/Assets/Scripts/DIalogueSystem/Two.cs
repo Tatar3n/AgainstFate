@@ -9,7 +9,7 @@ public class Two : MonoBehaviour
     public GameObject NamePanel;
     public GameObject Name;
     public Text dialog;
-    public string message = "Наберись терпения, друг! \nБашня Судеб не любит спешки.";
+    public string message = "Наберись терпения, друг!\nБашня Судеб не любит спешки.";
     public bool DialStart = false;
     public bool flag = true;
     // Start is called before the first frame update
