@@ -9,7 +9,7 @@ public class Three : MonoBehaviour
     public GameObject NamePanel;
     public GameObject Name;
     public Text dialog;
-    public string message = "Кажется мы в тупике... \n Давай попробуем пойти другим путем!";
+    public string message = "Кажется мы в тупике... \nДавай попробуем пойти другим путем!";
     public bool DialStart = false;
     public bool flag = true;
     // Start is called before the first frame update
@@ -18,9 +18,19 @@ public class Three : MonoBehaviour
 
 
     }
+    IEnumerator wait()
+    {
+        yield return new WaitForSeconds(3);
+        panel.SetActive(false);
+        //dialog.SetActive(false);
+        image.SetActive(false);
+        Name.SetActive(false);
+        NamePanel.SetActive(false);
+        dialog.text = "";
+    }
     private void OnTriggerEnter2D(Collider2D coll)
     {
-        if (coll.tag == "Player" && flag)
+        if (coll.tag == "Player")
         {
             panel.SetActive(true);
             //dialog.SetActive(true);
@@ -34,12 +44,8 @@ public class Three : MonoBehaviour
     }
     private void OnTriggerExit2D(Collider2D coll)
     {
-        panel.SetActive(false);
-        //dialog.SetActive(false);
-        image.SetActive(false);
-        Name.SetActive(false);
-        NamePanel.SetActive(false);
-        dialog.text = "";
+        StartCoroutine(wait());
+        
     }
     // Update is called once per frame
     void Update()
@@ -47,7 +53,7 @@ public class Three : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
 
-            if (DialStart)
+            if (DialStart )
             {
                 panel.SetActive(false);
                 //dialog.SetActive(false);

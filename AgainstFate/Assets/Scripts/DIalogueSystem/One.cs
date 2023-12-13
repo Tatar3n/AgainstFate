@@ -18,9 +18,15 @@ public class One : MonoBehaviour
         message = "’мм, эта платформа чем-то отличаетс€ от остальных...";
         
     }
+    IEnumerator wait()
+    {
+        
+        yield return new WaitForSeconds(10);
+       
+    }
     private void OnTriggerEnter2D(Collider2D coll)
     {
-        if (coll.tag=="Player" && flag)
+        if (coll.tag=="Player")
         {
             panel.SetActive(true);
             //dialog.SetActive(true);
@@ -34,12 +40,16 @@ public class One : MonoBehaviour
     }
     private void OnTriggerExit2D(Collider2D coll)
     {
+        //Debug.Log("2222");
+
+        //StartCoroutine(wait());
         panel.SetActive(false);
         //dialog.SetActive(false);
         image.SetActive(false);
         Name.SetActive(false);
         NamePanel.SetActive(false);
         dialog.text = "";
+
     }
     // Update is called once per frame
     void Update()

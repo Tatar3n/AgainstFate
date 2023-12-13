@@ -9,7 +9,7 @@ public class Four : MonoBehaviour
     public GameObject NamePanel;
     public GameObject Name;
     public Text dialog;
-    public string message = " Ёти платформы выгл€д€т очень гор€чими! \n Ѕудь осторожен!";
+    public string message = " Ёти платформы выгл€д€т очень гор€чими! \nЅудь осторожен!";
     public bool DialStart = false;
     public bool flag = true;
     // Start is called before the first frame update
