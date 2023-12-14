@@ -5,7 +5,9 @@ using UnityEngine.UI;
 public class Pattern : MonoBehaviour
 {
     private bool a = true;
+    
     public string[] message;
+    public int[] Arra;
     // FIRST HERO
     public Text FirstText;
     public GameObject FirstImage;
@@ -40,7 +42,7 @@ public class Pattern : MonoBehaviour
     private int index = 0;
     private int flag = 0;
     // public int count;// показывает, какой герой был вызван последним
-    private int[] Array = { 1, 3, 3, 2, 1, 2, 2 }; //Заполнять только 1 2 или 3!!! по длине должно быть как массив стрингов
+    //private int[] Array = Arra; //Заполнять только 1 2 или 3!!! по длине должно быть как массив стрингов
     //private bool[Array.Length] BA = { false } * Array.Length;
     private void FirstVisualise()
     {
@@ -107,18 +109,18 @@ public class Pattern : MonoBehaviour
         if (coll.tag == "Player" && a)
         {
             a = false;
-            if (Array[0]==1)
+            if (Arra[0]==1)
             {
                 DoFirst(index);
                 flag = 1;
             }
-            else if (Array[0] == 2)
+            else if (Arra[0] == 2)
             {
                 DoSecond(index);
                 flag = 2;
 
             }
-            else if (Array[0] == 3)
+            else if (Arra[0] == 3)
             {
                 DoThird(index);
                 flag = 3;
@@ -129,21 +131,21 @@ public class Pattern : MonoBehaviour
     }
     private void DoDialogue(int n)
     {
-        if (Array[n]==1)
+        if (Arra[n]==1)
         {
             SecondClose();
             ThirdClose();
             DoFirst(n);
             
         }
-        else if (Array[n]==2)
+        else if (Arra[n]==2)
         {
             ThirdClose();
             FirstClose();
             DoSecond(n);
             
         }
-        else if (Array[n]==3) 
+        else if (Arra[n]==3) 
         {
             FirstClose();
             SecondClose();
@@ -167,9 +169,9 @@ public class Pattern : MonoBehaviour
     {
         FirstVisualise();
 
-        if (flag != Array[index])
+        if (flag != Arra[index])
         {
-            flag = Array[index];
+            flag = Arra[index];
             StartCoroutine(FirstTL());
         }
         else
@@ -207,9 +209,9 @@ public class Pattern : MonoBehaviour
     {
         ThirdVisualise();
 
-        if (flag != Array[index])
+        if (flag != Arra[index])
         {
-            flag = Array[index];
+            flag = Arra[index];
             StartCoroutine(ThirdTL());
         }
         else
@@ -246,9 +248,9 @@ public class Pattern : MonoBehaviour
     {
         SecondVisualise();
 
-        if (flag != Array[index])
+        if (flag != Arra[index])
         {
-            flag = Array[index];
+            flag = Arra[index];
             StartCoroutine(SecondTL());
         }
         else
