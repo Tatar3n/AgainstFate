@@ -38,7 +38,7 @@ Transform:
   m_Children:
   - {fileID: 5966088700204295298}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &8833755001962001582
 SpriteRenderer:
@@ -180,8 +180,10 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   animator: {fileID: 557087747354306902}
+  isFreezing: 0
   moveSpeed: 3
   jumpForce: 4
+  isDialog: 0
 --- !u!114 &1628953069099038193
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -280,7 +282,7 @@ Animator:
   m_GameObject: {fileID: 7414595042767231155}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 67fe49bc61de6314486ff47771a82f0d, type: 2}
+  m_Controller: {fileID: 9100000, guid: a9acbf6a00b73dc44bf091ee9af0963d, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
