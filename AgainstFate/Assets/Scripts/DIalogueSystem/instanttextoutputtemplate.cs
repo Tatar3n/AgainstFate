@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class instanttextoutputtemplate : MonoBehaviour
 {
     public Text FirstText;
@@ -11,6 +11,7 @@ public class instanttextoutputtemplate : MonoBehaviour
     public GameObject FirstSkipping;
     public GameObject FirstName;
 
+    private bool DialStart=false;
     private bool flag = true;
     public string message;
     private void CloseVisual()
