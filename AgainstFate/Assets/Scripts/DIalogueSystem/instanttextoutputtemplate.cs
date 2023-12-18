@@ -10,7 +10,7 @@ public class instanttextoutputtemplate : MonoBehaviour
     public GameObject FirstNamePanel;
     public GameObject FirstSkipping;
     public GameObject FirstName;
-
+    public int TimeTOWait=0;
     private bool DialStart=false;
     private bool flag = true;
     public string message;
@@ -35,7 +35,7 @@ public class instanttextoutputtemplate : MonoBehaviour
     }
     IEnumerator wait()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(TimeTOWait);
         CloseVisual();
     }
     private void OnTriggerEnter2D(Collider2D coll)
