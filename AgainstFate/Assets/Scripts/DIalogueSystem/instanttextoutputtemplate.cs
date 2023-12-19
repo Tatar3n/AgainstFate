@@ -49,8 +49,11 @@ public class instanttextoutputtemplate : MonoBehaviour
     }
     private void OnTriggerExit2D(Collider2D coll)
     {
-        CloseVisual();
-        flag = false;
+        if (coll.tag == "Player")
+        {
+            StartCoroutine(wait());
+            flag = false;
+        }
     }
     // Start is called before the first frame update
     void Start()
