@@ -32,7 +32,7 @@ public class MovingPlatformUpDown : MonoBehaviour
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.tag == null)
+        if (collision.tag == "Player")
         {
             collision.gameObject.transform.SetParent(null);
             
