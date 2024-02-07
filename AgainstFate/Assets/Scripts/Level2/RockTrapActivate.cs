@@ -6,7 +6,7 @@ public class RockTrapActivate : MonoBehaviour
 {
     public GameObject[] p;
     public GameObject player;
-    static int size = 4;
+    static int size = 47;
     Vector3[] v = new Vector3[size];
     Rigidbody2D[] rb = new Rigidbody2D[size];
     float t;
@@ -26,7 +26,7 @@ public class RockTrapActivate : MonoBehaviour
 
     private void Update()
     {
-        if(Time.time - t> 0.5 && f && ii<size)
+        if(Time.time - t> 0.3 && f && ii<size)
         {
            
                 rb[ii].isKinematic = false;
