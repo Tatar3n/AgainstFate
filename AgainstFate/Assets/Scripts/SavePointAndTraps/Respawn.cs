@@ -5,6 +5,7 @@ using UnityEngine;
 public class Respawn : MonoBehaviour
 {
     public SavePoint savepoint;
+    public bool recoverRockTrap = false;
 
     private void Start()
     {
@@ -15,5 +16,7 @@ public class Respawn : MonoBehaviour
     {
        
         transform.position = savepoint.transform.position;
+        recoverRockTrap = true;
+
     }
 }
