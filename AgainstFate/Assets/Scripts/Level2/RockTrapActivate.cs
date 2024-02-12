@@ -6,7 +6,7 @@ public class RockTrapActivate : MonoBehaviour
 {
     public GameObject[] p;
     public GameObject player;
-    static int size = 47;
+    static int size = 46;
     Vector3[] v = new Vector3[size];
     Rigidbody2D[] rb = new Rigidbody2D[size];
     float t;
