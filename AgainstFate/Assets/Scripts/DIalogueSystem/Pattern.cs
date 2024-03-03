@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class Pattern : MonoBehaviour
 {
     private bool a = true;
-    
+    public bool IsEnd=false;
     public string[] message;
     public int[] Arra;
     // FIRST HERO
@@ -287,6 +287,7 @@ public class Pattern : MonoBehaviour
             }
             else
             {
+                IsEnd= true;
                 FirstClose();
                 SecondClose();
                 ThirdClose();
