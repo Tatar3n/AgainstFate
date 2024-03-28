@@ -131,12 +131,16 @@ public class PatternWithColliderExit : MonoBehaviour
     }
     private void OnTriggerExit2D(Collider2D coll)
     {
-        IsEnd = true;
-        a = false;
-        FirstClose();
-        SecondClose();
-        ThirdClose();
-        StopAllCoroutines();
+        if (coll.name == "Player")
+        {
+            IsEnd = true;
+            a = false;
+            FirstClose();
+            SecondClose();
+            ThirdClose();
+            StopAllCoroutines();
+        }
+
     }
     private void DoDialogue(int n)
     {
