@@ -1,13 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
+using UnityEngine.EventSystems;
 public class RangedAttackController : MonoBehaviour
 {
- 
+    [SerializeField] Image uiFill;
     public Transform firePoint;
     public GameObject bp;
     public bool Waiting10sek=false;
+    private bool istimer = false;
+    public int Duration;
+    private int remainingDuration;
     void Start()
     {
 
@@ -19,10 +23,13 @@ public class RangedAttackController : MonoBehaviour
         {
             if (!Waiting10sek)
             {
-                Debug.Log("heuihe");
+                //TODO Turning on the timer
+                
                 //animator.Play("Fireball");
                 Shoot();
                 Waiting10sek = true;
+                Being(Duration);
+                
                 StartCoroutine(DoAttack());
             }
             else
@@ -32,7 +39,16 @@ public class RangedAttackController : MonoBehaviour
         }
         
     }
+    private void Being(int Second)
+    {
+        remainingDuration = Second;
+        if (!istimer)
+        {
+            StartCoroutine(UpdateTimer());
+        }
 
+        istimer = true;
+    }
     void Shoot()
     {
       
@@ -42,5 +58,18 @@ public class RangedAttackController : MonoBehaviour
     {
         yield return new WaitForSeconds(10f);
         Waiting10sek = false;
+    }
+     IEnumerator UpdateTimer()
+    {
+        while (remainingDuration >= 0)
+        {
+            
+               // uiText.text = $"{remainingDuration / 60:00}:{remainingDuration % 60:00}";
+                uiFill.fillAmount = Mathf.InverseLerp(0, Duration, remainingDuration);
+                remainingDuration--;
+                yield return new WaitForSeconds(1f);
+                
+        }
+        istimer= false;
     }
 }
