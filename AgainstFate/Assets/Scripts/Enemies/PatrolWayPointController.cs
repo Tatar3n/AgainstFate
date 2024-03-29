@@ -11,4 +11,9 @@ public class PatrolWayPointController : MonoBehaviour
     {
         return (jumpOnLeft && speed < 0) || (jumpOnRight && speed > 0);
     }
+
+	private void OnDrawGizmos()
+	{
+        Gizmos.DrawSphere(transform.position, 0.1f);
+	}
 }
