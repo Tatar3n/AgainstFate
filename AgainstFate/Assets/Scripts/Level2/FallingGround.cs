@@ -4,17 +4,17 @@ using UnityEngine;
 
 public class FallingGround : MonoBehaviour
 {
-    public bool start;
-    float  pos2 = -11.18f;
-    public GameObject ground, platforms_1;
+    public static bool start;
+    float  pos2 = -19.5f;
+    public GameObject ground, platforms_1,explosion;
     float speed = 4f;
     private void FixedUpdate()
     {
-        if (ground.transform.position.y >= pos2 && start)
+        if (start)
         {
-            ground.transform.position = new Vector2(ground.transform.position.x, ground.transform.position.y - speed * Time.fixedDeltaTime);
+            ground.SetActive(false);
             platforms_1.SetActive(false);
-           
+            explosion.SetActive(true);
         }
     }
 }

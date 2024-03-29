@@ -7,7 +7,7 @@ public class CameraShake : MonoBehaviour
     public Camera maincam;
     float shakeAmount = 0;
     BoxCollider2D bx;
-    bool startshake = false;
+    public static bool startshake = false;
     private void Awake()
     {
         if (maincam == null)
