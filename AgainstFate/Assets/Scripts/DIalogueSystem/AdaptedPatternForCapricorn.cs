@@ -7,6 +7,7 @@ public class AdaptedPatterForCapricorn : MonoBehaviour
     private bool a = true;
     public bool IsEnd = false;
     public bool TimeToRockfall=false;
+    public static bool DialogueIsStarted = false;
     [Multiline(4)]
     public string[] message;
     public int[] Arra;
@@ -112,6 +113,7 @@ public class AdaptedPatterForCapricorn : MonoBehaviour
         {
             Debug.Log("ijeivjew");
             a = false;
+            DialogueIsStarted = true;
             if (Arra[0] == 1)
             {
                 DoFirst(index);

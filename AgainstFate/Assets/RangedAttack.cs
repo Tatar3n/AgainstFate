@@ -17,7 +17,8 @@ public class RangedAttack : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D hitInfo)
     {
-        if (hitInfo.name=="Square" || hitInfo.name=="SavePoint") return;
+        if (hitInfo.name=="Square" || hitInfo.name=="SavePoint" ) return;
+        //if (hitInfo.name != "Enemy" || hitInfo.name != "Walls") return;
         //TODO when ваня сделает врагов
         /*Enemy enemy = hitInfo.GetComponent<Enemy>();
         if (enemy != null)
