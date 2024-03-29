@@ -6,7 +6,7 @@ public class RockTrapActivate : MonoBehaviour
 {
     public GameObject[] p;
     public GameObject player;
-    static int size = 46;
+    static int size = 44;
     Vector3[] v = new Vector3[size];
     Rigidbody2D[] rb = new Rigidbody2D[size];
     float t,tt;
@@ -33,8 +33,8 @@ public class RockTrapActivate : MonoBehaviour
         {
             FallingGround.start = true;
             f = true;
-          
-            if (Time.time - t > 0.3 && f && ii < size)
+            StartCoroutine(TimeBeforeRockTRap());
+            if (Time.time - t > 0.27 && f && ii < size && !wait)
             {
 
                 rb[ii].isKinematic = false;
@@ -47,6 +47,7 @@ public class RockTrapActivate : MonoBehaviour
             }
             if (re.recoverRockTrap)
             {
+                wait = true;
                 ii = 0;
                 f = false;
                 re.recoverRockTrap = false;
@@ -61,6 +62,13 @@ public class RockTrapActivate : MonoBehaviour
            
             
         }
+
+        IEnumerator TimeBeforeRockTRap()
+        {
+            yield return new WaitForSeconds(1);
+            wait = false;
+        }
+
 
     }
    
