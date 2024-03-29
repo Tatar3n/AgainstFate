@@ -22,11 +22,13 @@ public class MeleeAttackController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            isAttacking = true;
-            Attack();
-            animator.Play("Fight");
-            StartCoroutine(DoAttack());
-            //Invoke("ResetFight", 5f);
+            if (!isAttacking)
+            {
+                Attack();
+                animator.Play("Fight");
+                StartCoroutine(DoAttack());
+                //Invoke("ResetFight", 5f);
+            }
         }
     }
 
@@ -37,7 +39,7 @@ public class MeleeAttackController : MonoBehaviour
         foreach (Collider2D enemy in enemies)
         {
             if(enemy.gameObject.layer == 7)
-                enemy.GetComponent<HP>().Damaging(standartDamage);
+                enemy.GetComponent<EnemyHP1>().GetDamage(standartDamage);
             else if (enemy.gameObject.layer == 8)
                 enemy.GetComponent<CaveThrowBullet>().isDead = true;
         }
@@ -49,6 +51,7 @@ public class MeleeAttackController : MonoBehaviour
     }
     IEnumerator DoAttack()
     {
+        isAttacking = true;
         //attackHitBox.SetActive(true);
         yield return new WaitForSeconds(1f);
         //attackHitBox.SetActive(false);
