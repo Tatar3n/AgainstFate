@@ -5,7 +5,8 @@ using UnityEngine.UI;
 public class Pattern : MonoBehaviour
 {
     private bool a = true;
-    public bool IsEnd=false;
+    public static bool IsEnd=false;
+    public static bool IsStart=false;
     public string[] message;
     public int[] Arra;
     // FIRST HERO
@@ -109,6 +110,7 @@ public class Pattern : MonoBehaviour
         if (coll.tag == "Player" && a)
         {
             a = false;
+            IsStart= true;
             if (Arra[0]==1)
             {
                 DoFirst(index);

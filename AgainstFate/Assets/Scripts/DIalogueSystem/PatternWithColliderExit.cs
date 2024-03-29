@@ -6,6 +6,7 @@ public class PatternWithColliderExit : MonoBehaviour
 {
     private bool a = true;
     public bool IsEnd = false;
+    public static bool DialogueStarted=false;
     public string[] message;
     public int[] Arra;
     // FIRST HERO
@@ -108,6 +109,7 @@ public class PatternWithColliderExit : MonoBehaviour
     {
         if (coll.tag == "Player" && a)
         {
+            DialogueStarted = true;
             a = false;
             if (Arra[0] == 1)
             {
@@ -138,6 +140,7 @@ public class PatternWithColliderExit : MonoBehaviour
             FirstClose();
             SecondClose();
             ThirdClose();
+            IsEnd = true;
             StopAllCoroutines();
         }
 
@@ -293,7 +296,7 @@ public class PatternWithColliderExit : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.N) && !a)
+        if (Input.GetKeyDown(KeyCode.N) && !a &&!IsEnd)
         {
             if (index < message.Length)
             {
