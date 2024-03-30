@@ -42,6 +42,8 @@ public class MeleeAttackController : MonoBehaviour
                 enemy.GetComponent<EnemyHP1>().GetDamage(standartDamage);
             else if (enemy.gameObject.layer == 8)
                 enemy.GetComponent<CaveThrowBullet>().isDead = true;
+            else if (enemy.gameObject.layer == 9)
+                enemy.GetComponent<Boss2HP>().GetDamage(standartDamage);
         }
     }
 
