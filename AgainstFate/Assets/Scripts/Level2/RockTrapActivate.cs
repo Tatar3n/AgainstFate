@@ -30,14 +30,15 @@ public class RockTrapActivate : MonoBehaviour
 
     private void Update()
     {
-        if (d.IsEnd)
+        if (d.IsEnd && !EndRockTrap)
         {
             FallingGround.start = true;
             f = true;
             StartCoroutine(TimeBeforeRockTRap());
             if (Time.time - t > 0.27 && f && ii < size && !wait)
             {
-
+                if (!CameraShake.startshake)
+                    fl = true;
                 rb[ii].isKinematic = false;
                 ii++;
                 t = Time.time;

@@ -8,6 +8,7 @@ public class RangedAttackController : MonoBehaviour
     [SerializeField] Image uiFill;
     public Transform firePoint;
     public GameObject bp;
+    public PlayerMovement player;
     public bool Waiting10sek=false;
     private bool istimer = false;
     public int Duration;
@@ -19,7 +20,7 @@ public class RangedAttackController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyUp(KeyCode.R))
+        if (Input.GetKeyUp(KeyCode.R) && !player.isDialog)
         {
             if (!Waiting10sek)
             {
