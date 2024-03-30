@@ -86,7 +86,7 @@ public class PlayerMovement : MonoBehaviour
             _rigidbody.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
     }
 
-    private bool IsGrounded()
+    public bool IsGrounded()
     {
         float boxCollideSize = 0.08f;
         // TOFIX Возможно придётся уменьшать ширину для checkGround, чтобы не прыгать от стен, если ничего не придумаем

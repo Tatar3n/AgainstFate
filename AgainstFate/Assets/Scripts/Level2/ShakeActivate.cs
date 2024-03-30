@@ -8,7 +8,7 @@ public class ShakeActivate : MonoBehaviour
    
     void Update()
     {
-        if (a.TimeToRockfall)
+        if (a.TimeToRockfall || RockTrapActivate.fl)
             CameraShake.startshake = true;
         if(RockTrapActivate.EndRockTrap)
             CameraShake.startshake = false;

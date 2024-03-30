@@ -11,6 +11,7 @@ public class RockTrapActivate : MonoBehaviour
     Rigidbody2D[] rb = new Rigidbody2D[size];
     float t,tt;
     bool f = false;
+    public static bool fl = false;
     int ii = 0;
     public static bool EndRockTrap = false;
     public AdaptedPatterForCapricorn d;
@@ -29,14 +30,15 @@ public class RockTrapActivate : MonoBehaviour
 
     private void Update()
     {
-        if (d.IsEnd)
+        if (d.IsEnd && !EndRockTrap)
         {
             FallingGround.start = true;
             f = true;
             StartCoroutine(TimeBeforeRockTRap());
             if (Time.time - t > 0.27 && f && ii < size && !wait)
             {
-
+                if (!CameraShake.startshake)
+                    fl = true;
                 rb[ii].isKinematic = false;
                 ii++;
                 t = Time.time;
@@ -47,6 +49,7 @@ public class RockTrapActivate : MonoBehaviour
             }
             if (re.recoverRockTrap)
             {
+                fl = true;
                 wait = true;
                 ii = 0;
                 f = false;
