@@ -11,6 +11,7 @@ public class RockTrapActivate : MonoBehaviour
     Rigidbody2D[] rb = new Rigidbody2D[size];
     float t,tt;
     bool f = false;
+    public static bool fl = false;
     int ii = 0;
     public static bool EndRockTrap = false;
     public AdaptedPatterForCapricorn d;
@@ -47,6 +48,7 @@ public class RockTrapActivate : MonoBehaviour
             }
             if (re.recoverRockTrap)
             {
+                fl = true;
                 wait = true;
                 ii = 0;
                 f = false;
