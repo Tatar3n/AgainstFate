@@ -138,7 +138,7 @@ public class bossBehaviorScenario : MonoBehaviour
 	IEnumerator ThrowRockDelay()
 	{
 		isThrowRockEnd = false;
-		yield return new WaitForSeconds(2f); // Задержка в 10 секунд
+		yield return new WaitForSeconds(2f); 
 		isThrowRockEnd = true;
 	}
 
@@ -253,7 +253,7 @@ public class bossBehaviorScenario : MonoBehaviour
 	IEnumerator HornAttackActiveDelay()
 	{
 		stayInWall = true;
-		yield return new WaitForSeconds(1f); // Задержка в 1 секунду
+		yield return new WaitForSeconds(4f); // Задержка в 1 секунду
 		stayInWall = false;
 	}
 
@@ -270,10 +270,13 @@ public class bossBehaviorScenario : MonoBehaviour
 	// поворот босса
 	private void Flip()
 	{
-		if (rb.velocity.x > 0)
-			transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));
-		else if (rb.velocity.x < 0)
-			transform.rotation = Quaternion.Euler(new Vector3(0, 180, 0));
+		if (!isInWall)
+		{
+			if (rb.velocity.x > 0)
+				transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));
+			else if (rb.velocity.x <= 0)
+				transform.rotation = Quaternion.Euler(new Vector3(0, 180, 0));
+		}
 	}
 
 	private void GiveDamageWhenPlayerEntersBossCollision()
