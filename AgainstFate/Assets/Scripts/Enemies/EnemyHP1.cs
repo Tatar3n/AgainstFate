@@ -19,7 +19,7 @@ public class EnemyHP1 : MonoBehaviour
         {
         if (hp <= 0)
         {
-
+            spriteRenderer.enabled = false;
             enemydeathanim.SetActive(true);
             StartCoroutine(Death());
         }
@@ -38,8 +38,8 @@ public class EnemyHP1 : MonoBehaviour
 
     IEnumerator Death()
     {
-
-        yield return new WaitForSeconds(0.05f);
+        
+        yield return new WaitForSeconds(1f);
         GameObject.Destroy(gameObject);
 
 

@@ -5,23 +5,32 @@ using UnityEngine;
 public class PlayerStopforPattern : MonoBehaviour
 {
     public PlayerMovement player;
+    public GameObject wall;
+    bool fl = true;
+    public Pattern p;
+
    
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.tag == "Player")
         {
-            if (player.IsGrounded() && !Pattern.IsEnd)
+           
+
+            if (player.IsGrounded() && !p.IsEnd)
             {
                 player.isDialog = true;
                 player.isFreezing = true;
-              
                 
+
             }
 
-            else
+            else if (p.IsEnd)
             {
+               
                 player.isDialog = false;
                 player.isFreezing = false;
+                wall.SetActive(false);
+                fl = false;
             }
         }
     }

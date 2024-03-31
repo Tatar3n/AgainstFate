@@ -6,6 +6,7 @@ public class MaidenAttackStart : MonoBehaviour
 {
     Animator a;
     EnemyLogic maiden;
+    public Pattern p;
     private void Start()
     {
         a = GetComponent<Animator>();
@@ -14,7 +15,7 @@ public class MaidenAttackStart : MonoBehaviour
 
     private void Update()
     {
-        if (Pattern.IsEnd)
+        if (p.IsEnd)
         {
             a.enabled = true;
             maiden.enabled = true;

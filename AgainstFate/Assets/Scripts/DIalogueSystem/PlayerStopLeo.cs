@@ -1,0 +1,39 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class PlayerStopLeo : MonoBehaviour
+{
+    public PlayerMovement player;
+    public GameObject wall;
+    public static bool fl = true;
+   
+    public Pattern p;
+
+   
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.tag == "Player")
+        {
+
+            
+            if (player.IsGrounded() && !p.IsEnd)
+            {
+                player.isDialog = true;
+                player.isFreezing = true;
+
+
+            }
+
+            else if (p.IsEnd)
+            {
+
+                player.isDialog = false;
+                player.isFreezing = false;
+                wall.SetActive(false);
+                fl = false;
+                
+            }
+        }
+    }
+}
