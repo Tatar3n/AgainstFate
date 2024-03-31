@@ -14,6 +14,8 @@ public class Five_Boss : MonoBehaviour
     public GameObject SkippingSagittarius;
     public GameObject SkippingSnakeCarrier;
     public SpriteRenderer sagitarius;
+    public GameObject expl;
+    public GameObject expl2;
     //[SerializeField] TextMeshProUGUI text1;
     public Text SnakeC;
     public Text Sagittarius;
@@ -22,9 +24,12 @@ public class Five_Boss : MonoBehaviour
     public GameObject SnakeCname;
     public GameObject SagittariusName;
 
+
+    public bool IsEnd = false;
     public PlayerMovement player;
     //public GameObject playerMovement;
-
+    private ParticleSystem ps;
+    private ParticleSystem ps2;
     private int index = 1;
     private bool flag = true;
     private string[] messages = { "Очень смело с твоей стороны вновь появиться здесь, друг.",//0
@@ -39,9 +44,10 @@ public class Five_Boss : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        ps = expl.GetComponent<ParticleSystem>();
+        ps2 = expl.GetComponent<ParticleSystem>();
 
-     
-        index= 0;
+        index = 0;
         //Sagittarius.text = messages[index];
     }
     
@@ -129,7 +135,7 @@ public class Five_Boss : MonoBehaviour
                         //Continue_SnakeC();
                         StopAllCoroutines();
                         SnakeC.text = messages[index];
-                       
+                        
                     }
                     
                 }
@@ -175,6 +181,8 @@ public class Five_Boss : MonoBehaviour
                             SagittariusNamePanel.SetActive(false);
                             SagittariusPanelWord.SetActive(false);
                             SkippingSagittarius.SetActive(false);
+                            ps.Play();
+                            ps2.Play();
                         }
                         else
                         { Sagittarius.text = messages[index]; }
@@ -196,9 +204,11 @@ public class Five_Boss : MonoBehaviour
                 SagittariusNamePanel.SetActive(false);
                 SagittariusPanelWord.SetActive(false);
                 SkippingSagittarius.SetActive(false) ;
+                ps.Play();
+                ps2.Play();
                 //anim.SetActive(true);
                 //playerMovement.SetActive(true);
-                
+
             }
         }
     }
@@ -256,6 +266,8 @@ private void Continue_SnakeC()
             SagittariusNamePanel.SetActive(false);
             SagittariusPanelWord.SetActive(false);
             SkippingSagittarius.SetActive(false);
+            ps.Play();
+            ps2.Play();
         }
             
         
