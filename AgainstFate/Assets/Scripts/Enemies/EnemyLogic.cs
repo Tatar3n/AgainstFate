@@ -108,13 +108,14 @@ public class EnemyLogic : MonoBehaviour
         FindCloserPoint();
         if (!canAttack && IsGrounded())
         {
-            Vector3 direction = player.position - transform.position;
-            rb.velocity = new Vector2(direction.x * speed / 2, rb.velocity.y);
+            //Vector3 direction = player.position - transform.position;
+            //rb.velocity = new Vector2(direction.x * speed / 2, rb.velocity.y);
+            rb.velocity = Vector2.zero;
         }
         else
         {
             BeforeAttack(goodObjs);
-            if ((player.GetComponent<BoxCollider2D>().bounds.min.y < _boxCollider.bounds.max.y || !IsGrounded()) && !isStuck)
+            if ((player.GetComponent<BoxCollider2D>().bounds.min.y < _boxCollider.bounds.max.y ) && !isStuck && !isMozhno) // || !IsGrounded()
             {
                 Vector3 direction = player.position - transform.position;
                 direction.Normalize();
@@ -126,23 +127,94 @@ public class EnemyLogic : MonoBehaviour
                 Vector3 direction = actualJumpPoint.position - transform.position;
                 direction.Normalize();
                 rb.velocity = new Vector2(direction.x * speed, rb.velocity.y);
+
+                if ((!CanReachPlayerFromPoint(actualJumpPoint.position) || isMozhno) && !isStuck)
+                {
+                    if(!isMozhno)
+                    FindCloserPointForJumpPoint();
+                    if (Mathf.Abs(actualJumpPoint.position.x - transform.position.x) < 0.1f || isMozhno && !isStuck)
+                    {
+                        isMozhno = true;
+                        direction = nextJumpPoint.position - transform.position;
+                        direction.Normalize();
+                        rb.velocity = new Vector2(direction.x * speed, rb.velocity.y);
+                        if (Mathf.Abs(transform.position.x - nextJumpPoint.position.x) < 0.1f)
+                        {
+                            if (!CanReachPlayerFromPoint(actualJumpPoint.position))
+                                FindCloserPointForJumpPoint();
+                            else
+                                isMozhno = false;
+                        }
+                    }
+                    if (Mathf.Abs(actualJumpPoint.position.x - transform.position.x) > 0.1f && isMozhno && IsGrounded())
+                    {
+                        direction = actualJumpPoint.position - transform.position;
+                        direction.Normalize();
+                        rb.velocity = new Vector2(direction.x * speed, rb.velocity.y);
+                    }
+                }
                 if ((canJump && IsGrounded() && Mathf.Abs(actualJumpPoint.position.x - transform.position.x) < 0.1f) || (canJump && isStuck && IsGrounded() && Mathf.Abs(actualJumpPoint.position.x - transform.position.x) < 0.1f))
                 {
                     StartCoroutine(JumpDelay());
                     Jump();
                     isStuck = false;
+                    isMozhno = false;
                 }
+                
             }
         }
-        Vector2 rayOrigin = transform.position;
-        Vector2 rayDirection = transform.right;
-        if (Physics2D.Raycast(rayOrigin, rayDirection, rayDistance, wallLayer) && 
-            player.GetComponent<BoxCollider2D>().bounds.min.y < _boxCollider.bounds.max.y &&
-            Mathf.Abs(actualJumpPoint.position.x - transform.position.x) < Mathf.Abs(player.position.x - transform.position.x))
+       // Vector2 rayOrigin = transform.position;
+        if (!isStackBefore)
         {
-            Debug.Log("Удар о стену!");
-            isStuck = true;
+            Vector2 rayDirection = transform.right;
+            Vector2 headRayOrigin = (Vector2)transform.position + Vector2.up * _boxCollider.bounds.size.y / 2; // Позиция головы героя
+            Vector2 feetRayOrigin = (Vector2)transform.position - Vector2.up * _boxCollider.bounds.size.y / 2; // Позиция ног героя
+
+            if ((Physics2D.Raycast(headRayOrigin, rayDirection, rayDistance, wallLayer) || Physics2D.Raycast(feetRayOrigin, rayDirection, rayDistance, wallLayer)) /*&&
+                player.GetComponent<BoxCollider2D>().bounds.min.y < _boxCollider.bounds.max.y*/ &&
+                Mathf.Abs(actualJumpPoint.position.x - transform.position.x) < Mathf.Abs(player.position.x - transform.position.x))
+            {
+                Debug.Log("Удар о стену!");
+                isStuck = true;
+                StartCoroutine(StackDelay());
+            }
         }
+    }
+
+    public Transform nextJumpPoint;
+    bool isMozhno = false;
+    public void FindCloserPointForJumpPoint()
+    {
+        Transform closestJumpPoint = null;
+        float closestDistance = Mathf.Infinity;
+        nextJumpPoint = actualJumpPoint;
+        foreach (Transform jumpPoint in jumpPoints)
+        {
+            float distance = Vector3.Distance(jumpPoint.position, nextJumpPoint.position);
+            if (distance < closestDistance && (jumpPoint.position.y > nextJumpPoint.position.y))
+            {
+                closestJumpPoint = jumpPoint;
+                closestDistance = distance;
+            }
+        }
+
+        if (closestJumpPoint != null)
+        {
+            nextJumpPoint = closestJumpPoint;
+        }
+    }
+    private bool CanReachPlayerFromPoint(Vector3 point)
+    {
+        RaycastHit2D hit = Physics2D.Linecast(point, player.position, platformLayerMask);
+        return hit.collider == null || hit.collider.gameObject == player.gameObject;
+    }
+
+    private bool isStackBefore = false;
+    IEnumerator StackDelay()
+    {
+        isStackBefore = true;
+        yield return new WaitForSeconds(0.3f); // 
+        isStackBefore = false;
     }
 
     // Находим ближайшую точку прыжка к игроку
@@ -241,9 +313,21 @@ public class EnemyLogic : MonoBehaviour
 
         //Gizmos.color = Color.red;
         //Gizmos.DrawWireCube(transform.position + boxCenter, boxSize);
+
+    Vector2 headRayOrigin = (Vector2)transform.position + Vector2.up * _boxCollider.bounds.size.y / 2; // Позиция головы героя
+    Vector2 feetRayOrigin = (Vector2)transform.position - Vector2.up * _boxCollider.bounds.size.y / 2; // Позиция ног героя
+    Vector2 rayDirection = transform.right;
+
+    Gizmos.color = Color.red;
+    Debug.DrawRay(headRayOrigin, rayDirection * rayDistance);
+    Gizmos.DrawWireSphere(headRayOrigin + rayDirection * rayDistance, 0.1f); // Отображение конечной точки луча
+
+    Gizmos.color = Color.blue;
+    Debug.DrawRay(feetRayOrigin, rayDirection * rayDistance);
+    Gizmos.DrawWireSphere(feetRayOrigin + rayDirection * rayDistance, 0.1f); // Отображение конечной точки луча
     }
 
-    public float rayDistance = 0.16f;
+    public float rayDistance = 0.02f;
     public LayerMask wallLayer;
 
 
