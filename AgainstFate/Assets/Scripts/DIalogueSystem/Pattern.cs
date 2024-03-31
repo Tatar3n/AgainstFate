@@ -5,8 +5,8 @@ using UnityEngine.UI;
 public class Pattern : MonoBehaviour
 {
     private bool a = true;
-    public static bool IsEnd=false;
-    public static bool IsStart=false;
+    public bool IsEnd=false;
+    public bool IsStart=false;
     public string[] message;
     public int[] Arra;
     // FIRST HERO
