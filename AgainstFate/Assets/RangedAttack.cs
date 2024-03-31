@@ -20,12 +20,12 @@ public class RangedAttack : MonoBehaviour
         if (hitInfo.name=="Square" || hitInfo.name=="SavePoint" ) return;
         //if (hitInfo.name != "Enemy" || hitInfo.name != "Walls") return;
         //TODO when ваня сделает врагов
-        /*Enemy enemy = hitInfo.GetComponent<Enemy>();
+        var enemy = hitInfo.GetComponent<EnemyHP1>();
         if (enemy != null)
         {
-            enemy.TakeDamage(damage);
+            enemy.GetComponent<EnemyHP1>().GetDamage(damage);
         }
-        */
+        
         //Instantiate(impactEffect, transform.position, transform.rotation);
         Debug.Log(hitInfo.name);
         

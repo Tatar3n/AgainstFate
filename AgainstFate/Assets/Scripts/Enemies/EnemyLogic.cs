@@ -5,6 +5,7 @@ using UnityEngine.AI;
 
 public class EnemyLogic : MonoBehaviour
 {
+    private Animator animator;
     // определяет поведение врага
     public enum Status
     {
@@ -42,6 +43,7 @@ public class EnemyLogic : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
         _boxCollider = GetComponent<BoxCollider2D>();
         MoveToWaypoint();
     }
@@ -269,8 +271,10 @@ public class EnemyLogic : MonoBehaviour
 
     IEnumerator BeforeAttackDelay()
     {
+      
         yield return new WaitForSeconds(0.5f); // Задержка в 1 секунду
         isBeforeAttack = true;
+       
     }
 
     private void BeforeAttack(Collider2D[] goodObjs)
@@ -278,14 +282,18 @@ public class EnemyLogic : MonoBehaviour
         Debug.Log(isBeforeAttack);
         if (canAttack)
         {
+
             if (!isBeforeAttack && goodObjs.Length != 0)
             {
                 StartCoroutine(BeforeAttackDelay());
+                animator.Play("MaideReadyToAttack");
             }
             else if (isBeforeAttack)
             {
                 Attack(goodObjs);
+                animator.Play("MaideFight");
             }
+
         }
     }
     private void Attack(Collider2D[] goodObjs)
