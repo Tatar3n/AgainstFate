@@ -8,18 +8,20 @@ public class EnemyHP1 : MonoBehaviour
     [SerializeField] private float hp = 100;
     public UnityEvent death;
     private SpriteRenderer spriteRenderer;
+    private EnemyLogic enemyLogic;
     public  GameObject enemydeathanim;
 
     private void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
-        
+        enemyLogic = GetComponent<EnemyLogic>();
     }
         void FixedUpdate()
         {
         if (hp <= 0)
         {
             spriteRenderer.enabled = false;
+            enemyLogic.enabled = false;
             enemydeathanim.SetActive(true);
             StartCoroutine(Death());
         }

@@ -6,6 +6,7 @@ using UnityEngine.AI;
 public class EnemyLogic : MonoBehaviour
 {
     private Animator animator;
+    public string AttackAnim;
     // определяет поведение врага
     public enum Status
     {
@@ -286,12 +287,12 @@ public class EnemyLogic : MonoBehaviour
             if (!isBeforeAttack && goodObjs.Length != 0)
             {
                 StartCoroutine(BeforeAttackDelay());
-                animator.Play("MaideReadyToAttack");
+                //animator.Play("MaideReadyToAttack");
             }
             else if (isBeforeAttack)
             {
                 Attack(goodObjs);
-                animator.Play("MaideFight");
+                animator.Play(AttackAnim);
             }
 
         }
