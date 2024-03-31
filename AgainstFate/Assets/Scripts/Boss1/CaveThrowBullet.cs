@@ -11,7 +11,15 @@ public class CaveThrowBullet : MonoBehaviour
     int i = 0;
     public bool isAttack;
     public bool isDead;
+    public GameObject door;
+    Animator a;
 
+    private BoxCollider2D bx;
+    private void Start()
+    {
+        bx = door.GetComponent<BoxCollider2D>();
+        a = door.GetComponent<Animator>();
+    }
     public void Spawn()
     {
         Instantiate(Bullet, bp);
@@ -20,10 +28,17 @@ public class CaveThrowBullet : MonoBehaviour
 	public void Update()
 	{
         if (isDead)
+        {
+            a.Play("doorboss1close");
+            bx.enabled = true;
             isAttack = false;
+            
+        }
 
         if (isAttack)
         {
+            a.Play("doorboss1");
+            bx.enabled = false;
             gameObject.layer = 8;
             gameObject.GetComponent<SpriteRenderer>().enabled = true;
 
@@ -46,6 +61,8 @@ public class CaveThrowBullet : MonoBehaviour
         }
         else
         {
+            a.Play("doorboss1close");
+            bx.enabled = true;
             gameObject.GetComponent<SpriteRenderer>().enabled = false;
         }
     }
