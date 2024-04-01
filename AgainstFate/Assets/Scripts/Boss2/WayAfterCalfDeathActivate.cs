@@ -7,6 +7,8 @@ public class WayAfterCalfDeathActivate : MonoBehaviour
     public GameObject HideWay;
     public Pattern p;
     public GameObject platforms;
+    public PlayerMovement player;
+    public GameObject CalfHp;
 
     private bool fl = true;
     private void Update()
@@ -16,6 +18,8 @@ public class WayAfterCalfDeathActivate : MonoBehaviour
             fl = false;
             HideWay.SetActive(true);
             platforms.SetActive(true);
+            player.jumpForce = 5;
+            CalfHp.SetActive(false);
         }
     }
 }

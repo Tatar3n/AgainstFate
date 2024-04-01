@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class bossBehaviorScenario : MonoBehaviour
 {
+
+	Animator a;
+	public ParticleSystem expl;
 	// Переменные и классы связанные с боссом
 
 	// состояние босса (STAY - неактивен, HORNATTACK - атака рогами до стены, THROWROCK - бросок камня в игрока)
@@ -71,10 +74,12 @@ public class bossBehaviorScenario : MonoBehaviour
 		rb = GetComponent<Rigidbody2D>();
 		boxCollider = GetComponent<BoxCollider2D>();
 		playerHP = player.gameObject.GetComponent<HP>();
+		a = GetComponent<Animator>();
 	}
 
 	private void PreparationToChooseAttack()
 	{
+		expl.Play();
 		if (!isStartPreparation)
 		{
 			StartCoroutine(PreparationToAttackDelay());
@@ -85,6 +90,7 @@ public class bossBehaviorScenario : MonoBehaviour
 		else
 		{
 			isJumpEnd = true;
+			expl.Stop();
 			if (!isStop)
 			{
 				rb.velocity = Vector2.zero;
@@ -105,8 +111,10 @@ public class bossBehaviorScenario : MonoBehaviour
 	{
 		if (status != Status.STAY)
 		{
+
 			if (status == Status.READY)
 			{
+				
 				PreparationToChooseAttack();
 				if (isPreparationEnd)
 				{
@@ -120,16 +128,19 @@ public class bossBehaviorScenario : MonoBehaviour
 			}
 			else if (status == Status.HORNATTACK)
 			{
+				
 				HornAttack();
+				
 			}
 			else if (status == Status.THROWROCK)
 			{
+				
 				ThrowStone();
 			}
 		}
 		else
 		{
-			// анимация стояния
+			a.Play("CalfDefault");
 		}
 		GiveDamageWhenPlayerEntersBossCollision();
 		Flip();
@@ -144,6 +155,7 @@ public class bossBehaviorScenario : MonoBehaviour
 
 	void ThrowStone()
 	{
+		
 		if (!isThrowRockEnd)
 		{
 			if (!isThrowRock)
@@ -177,6 +189,7 @@ public class bossBehaviorScenario : MonoBehaviour
 	{
 		if (!isInEdge)
 		{
+			a.Play("CalfRun");
 			if (transform.position.x - middleOfArena.position.x < 0)
 			{
 				GoToEdge(leftEdgeOfArena);
@@ -192,6 +205,7 @@ public class bossBehaviorScenario : MonoBehaviour
 		}
 		else if(isInEdge && !isInWall)
 		{
+			a.Play("CalfRunAttack");
 			if (Mathf.Abs(oppositeEdge.position.x - transform.position.x) > 0.1f && !isInWall)
 			{
 				Vector2 direction = (oppositeEdge.position - transform.position).normalized;
@@ -252,6 +266,7 @@ public class bossBehaviorScenario : MonoBehaviour
 	// Задержка в момент удара о стену
 	IEnumerator HornAttackActiveDelay()
 	{
+		a.Play("CalfDefault");
 		stayInWall = true;
 		yield return new WaitForSeconds(4f); // Задержка в 1 секунду
 		stayInWall = false;

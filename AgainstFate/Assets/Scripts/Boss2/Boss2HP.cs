@@ -8,7 +8,7 @@ public class Boss2HP : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private bossBehaviorScenario enemyLogic;
     public GameObject EndDialog;
-
+    public PlayerHP ph;
     public GameObject enemydeathanim;
 
     private void Start()
@@ -32,6 +32,7 @@ public class Boss2HP : MonoBehaviour
         hp -= damage;
         spriteRenderer.color = Color.red;
         Invoke("White", .2f);
+        ph.SetHealth(hp);
 
         if (hp <= 0)
         {
