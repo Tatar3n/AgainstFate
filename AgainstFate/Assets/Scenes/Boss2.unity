@@ -19129,8 +19129,8 @@ MonoBehaviour:
   slider: {fileID: 0}
   text: {fileID: 0}
   saveVolumeKey: MUSIC_PLAY_LEVEL
-  sliderTag: 
-  textVolumeTag: 
+  sliderTag: MUSIC_VOLUME_SLIDER
+  textVolumeTag: MUSIC_VOLUME_EXIST
   volume: 1
 --- !u!82 &1128284605
 AudioSource:
@@ -19142,7 +19142,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 2e903708a7ce3b54b86ccfa3f4cd5b4b, type: 3}
+  m_audioClip: {fileID: 8300000, guid: c8fe0c68dba291a4191c8b9656c06c4f, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1

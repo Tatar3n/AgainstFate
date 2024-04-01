@@ -10,6 +10,7 @@ TagManager:
   - MUSIC_VOLUME_EXIST
   - MUSIC_VOLUME_TEXT
   - MUSIC_PLAY_VOLUME_EXIST
+  - MUSIC_SOUNDS_TAG
   layers:
   - Default
   - TransparentFX
