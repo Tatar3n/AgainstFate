@@ -5,6 +5,17 @@ using UnityEngine;
 public class Boss2HP : MonoBehaviour
 {
     [SerializeField] private float hp = 1000;
+    private SpriteRenderer spriteRenderer;
+    private bossBehaviorScenario enemyLogic;
+    public GameObject EndDialog;
+
+    public GameObject enemydeathanim;
+
+    private void Start()
+    {
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        enemyLogic = GetComponent<bossBehaviorScenario>();
+    }
 
     public float GetHP()
     {
@@ -19,8 +30,30 @@ public class Boss2HP : MonoBehaviour
     public void GetDamage(float damage)
     {
         hp -= damage;
+        spriteRenderer.color = Color.red;
+        Invoke("White", .2f);
 
         if (hp <= 0)
-            GameObject.Destroy(gameObject);
+        {
+            EndDialog.SetActive(true);
+            spriteRenderer.enabled = false;
+            enemyLogic.enabled = false;
+            enemydeathanim.SetActive(true);
+            StartCoroutine(Death());
+        }
+       
     }
+    IEnumerator Death()
+    {
+
+        yield return new WaitForSeconds(1f);
+        GameObject.Destroy(gameObject);
+
+
+    }
+    public void White()
+    {
+        spriteRenderer.color = Color.white;
+    }
+
 }

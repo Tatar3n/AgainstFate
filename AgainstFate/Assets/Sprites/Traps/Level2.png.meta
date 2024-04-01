@@ -328,7 +328,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -349,7 +349,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -357,6 +357,27 @@ TextureImporter:
       bones: []
       spriteID: 10f7f503fa0efba4e98208989f4436d2
       internalID: -1091091667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level2_12
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce5eb7a9a73d8c44c94997999722b5f4
+      internalID: 701253971
       vertices: []
       indices: 
       edges: []
@@ -376,6 +397,7 @@ TextureImporter:
       Level2_1: 1102584602
       Level2_10: 446896252
       Level2_11: -1091091667
+      Level2_12: 701253971
       Level2_2: -1508091283
       Level2_3: -2114969042
       Level2_4: 2005146159
