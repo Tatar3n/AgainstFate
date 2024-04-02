@@ -190,7 +190,7 @@ public class bossBehaviorScenario : MonoBehaviour
 		if (!isInEdge)
 		{
 			a.Play("CalfRun");
-			if (transform.position.x - middleOfArena.position.x < 0)
+			if (transform.position.x - player.position.x < 0)
 			{
 				GoToEdge(leftEdgeOfArena);
 				oppositeEdge = rightEdgeOfArena;
