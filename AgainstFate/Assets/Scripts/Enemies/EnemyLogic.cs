@@ -118,7 +118,7 @@ public class EnemyLogic : MonoBehaviour
         else
         {
             BeforeAttack(goodObjs);
-            if ((player.GetComponent<BoxCollider2D>().bounds.min.y < _boxCollider.bounds.max.y ) && !isStuck && !isMozhno) // || !IsGrounded()
+            if ((player.GetComponent<BoxCollider2D>().bounds.min.y < _boxCollider.bounds.max.y ) && !isStuck) // || !IsGrounded()  && !isMozhno
             {
                 Vector3 direction = player.position - transform.position;
                 direction.Normalize();
@@ -131,37 +131,37 @@ public class EnemyLogic : MonoBehaviour
                 direction.Normalize();
                 rb.velocity = new Vector2(direction.x * speed, rb.velocity.y);
 
-                if ((!CanReachPlayerFromPoint(actualJumpPoint.position) || isMozhno) && !isStuck)
-                {
-                    if(!isMozhno)
-                    FindCloserPointForJumpPoint();
-                    if (Mathf.Abs(actualJumpPoint.position.x - transform.position.x) < 0.1f || isMozhno && !isStuck)
-                    {
-                        isMozhno = true;
-                        direction = nextJumpPoint.position - transform.position;
-                        direction.Normalize();
-                        rb.velocity = new Vector2(direction.x * speed, rb.velocity.y);
-                        if (Mathf.Abs(transform.position.x - nextJumpPoint.position.x) < 0.1f)
-                        {
-                            if (!CanReachPlayerFromPoint(actualJumpPoint.position))
-                                FindCloserPointForJumpPoint();
-                            else
-                                isMozhno = false;
-                        }
-                    }
-                    if (Mathf.Abs(actualJumpPoint.position.x - transform.position.x) > 0.1f && isMozhno && IsGrounded())
-                    {
-                        direction = actualJumpPoint.position - transform.position;
-                        direction.Normalize();
-                        rb.velocity = new Vector2(direction.x * speed, rb.velocity.y);
-                    }
-                }
-                if ((canJump && IsGrounded() && Mathf.Abs(actualJumpPoint.position.x - transform.position.x) < 0.1f) || (canJump && isStuck && IsGrounded() && Mathf.Abs(actualJumpPoint.position.x - transform.position.x) < 0.1f))
+				//if ((!CanReachPlayerFromPoint(actualJumpPoint.position)) && !isStuck) // || isMozhno
+				//{
+				//	if (!isMozhno)
+				//		FindCloserPointForJumpPoint();
+				//	if (Mathf.Abs(actualJumpPoint.position.x - transform.position.x) < 0.1f || isMozhno && !isStuck)
+				//	{
+				//		isMozhno = true;
+				//		direction = nextJumpPoint.position - transform.position;
+				//		direction.Normalize();
+				//		rb.velocity = new Vector2(direction.x * speed, rb.velocity.y);
+				//		if (Mathf.Abs(transform.position.x - nextJumpPoint.position.x) < 0.1f)
+				//		{
+				//			if (!CanReachPlayerFromPoint(actualJumpPoint.position))
+				//				FindCloserPointForJumpPoint();
+				//			else
+				//				isMozhno = false;
+				//		}
+				//	}
+				//	if (Mathf.Abs(actualJumpPoint.position.x - transform.position.x) > 0.1f && isMozhno && IsGrounded())
+				//	{
+				//		direction = actualJumpPoint.position - transform.position;
+				//		direction.Normalize();
+				//		rb.velocity = new Vector2(direction.x * speed, rb.velocity.y);
+				//	}
+				//}
+				if ((canJump && IsGrounded() && Mathf.Abs(actualJumpPoint.position.x - transform.position.x) < 0.1f) || (canJump && isStuck && IsGrounded() && Mathf.Abs(actualJumpPoint.position.x - transform.position.x) < 0.1f))
                 {
                     StartCoroutine(JumpDelay());
                     Jump();
                     isStuck = false;
-                    isMozhno = false;
+                    //isMozhno = false;
                 }
                 
             }
