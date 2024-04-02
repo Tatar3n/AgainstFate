@@ -5,25 +5,25 @@ using UnityEngine;
 
 public class RockFallingActivatingSound : MonoBehaviour
 {
-    // Start is called before the first frame update
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.tag == "Player")
-        {
-            Event.PlaySound(0, 1, false, false, 1, 1);
-        }    
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.tag == "Player")
-        {
-            Event.PlaySound(1, 1, false, false, 1, 1);
-        }
-    }
-
-
-
+    
+  
+    public AdaptedPatterForCapricorn a;
     public Sounds Event;
+    bool fl = true;
+
+    void Update()
+    {
+        if (fl && (a.TimeToRockfall || RockTrapActivate.fl))
+        {
+            fl = false;
+            Event.PlaySound(0, 1, false, false, 1, 1);
+        }
+        if (RockTrapActivate.EndRockTrap)
+            enabled = false;
+            //Event.PlaySound(1, 1, false, false, 1, 1);
+    }
+
+
+
 }
 

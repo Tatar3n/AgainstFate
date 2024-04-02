@@ -14,38 +14,39 @@ public class Level3 : MonoBehaviour
     public Respawn re;
     bool fl = false;
     Animator a;
-
+    Animator water;
 
     
     private void Start()
     {
         sp = GetComponent<SpriteRenderer>();
         a = FallTrap.GetComponent<Animator>();
+        water = Water.GetComponent<Animator>();
     }
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.tag == "Player" && Input.GetKeyDown(KeyCode.E))
+        if (collision.tag == "Player" && (Input.GetKeyDown(KeyCode.E) || fl))
         {
-            
-            Water.SetActive(true);
+
+            water.Play("Flood");
             a.Play("Flood(Trap)");
             Rain.SetActive(true);
             Platforms.SetActive(true);
             sp.sprite = open_lever;
+            fl = true;
            
         }
+        
     }
     private void Update()
     {
         if (re.recoverRockTrap )
         {
-            Water.SetActive(false);
+            water.Play("WaterDefault");
             a.Play("Default");
-            //FallTrap.SetActive(false);
-            Rain.SetActive(false);
-            Platforms.SetActive(false);
-            sp.sprite = close_lever;
+            //FallTrap.SetActive(false);    
+            
             re.recoverRockTrap = false;
         }
     }

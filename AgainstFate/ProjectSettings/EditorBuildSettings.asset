@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/TestWalk.unity
     guid: 04daa734311d7f242aa970d342b5e077
+  - enabled: 1
+    path: Assets/Scenes/Level3.unity
+    guid: eafcd68c8e097744bb66868593083bd6
   m_configObjects: {}
