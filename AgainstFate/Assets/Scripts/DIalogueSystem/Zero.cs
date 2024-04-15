@@ -23,7 +23,7 @@ public class Zero : MonoBehaviour
     */
     void Start()
     {
-        text.text = string.Empty;
+        text.text = message[0];
         //myButton.onClick.AddListener(MouseClick);
         //myButton.Click += new EventHandler(myButton_Click);
         //Controls.Add(myButton);
@@ -34,21 +34,15 @@ public class Zero : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.N))
         {
-            if (text.text == message[index])
-            {
+            
                 IsNextLine();
-            }
-            else
-            {
-                StopAllCoroutines();
-                text.text = message[index];
-            }
+           
         }
     }
     void StartDialog()
     {
         index = 0;
-        StartCoroutine(TypeLine());
+        //StartCoroutine(TypeLine());
         
         Snake.SetActive(true);
         panelDialog.SetActive(true);
@@ -71,8 +65,8 @@ public class Zero : MonoBehaviour
         if (index < message.Length - 1)
         {
             index++;
-            text.text = string.Empty;
-            StartCoroutine(TypeLine());
+            text.text = message[index];
+            //StartCoroutine(TypeLine());
         }
         else
         {

@@ -184,7 +184,9 @@ public class PatternWithColliderExit : MonoBehaviour
     private void DoFirst(int n)
     {
         FirstVisualise();
-
+        FirstText.text = message[index];
+        index++;
+        /*
         if (flag != Arra[index])
         {
             flag = Arra[index];
@@ -195,16 +197,19 @@ public class PatternWithColliderExit : MonoBehaviour
             if (FirstText.text == message[index])
             {
                 index++;
+                DoDialogue(index);
             }
             else
             {
+                //FirstText.text = "";
                 StopAllCoroutines();
+                FirstText.text = "";
                 FirstText.text = message[index];
-
                 index++;
             }
             flag = 0;
-        }
+        */
+
 
     }
 
@@ -224,27 +229,32 @@ public class PatternWithColliderExit : MonoBehaviour
     private void DoThird(int n)
     {
         ThirdVisualise();
-
-        if (flag != Arra[index])
-        {
-            flag = Arra[index];
-            StartCoroutine(ThirdTL());
-        }
-        else
-        {
-            if (ThirdText.text == message[index])
+        ThirdText.text = message[index];
+        index++;
+        /*
+            if (flag != Arra[index])
             {
-                index++;
+                flag = Arra[index];
+                StartCoroutine(ThirdTL());
             }
             else
             {
-                StopAllCoroutines();
-                ThirdText.text = message[index];
+                if (ThirdText.text == message[index])
+                {
+                    index++;
+                    DoDialogue(index);
+                }
+                else
+                {
+                    ThirdText.text = "";
+                    StopAllCoroutines();
+                    ThirdText.text = "";
+                    ThirdText.text = message[index];
 
-                index++;
-            }
-            flag = 0;
-        }
+                    index++;
+                }
+                flag = 0;
+            }*/
 
     }
 
@@ -263,27 +273,32 @@ public class PatternWithColliderExit : MonoBehaviour
     private void DoSecond(int n)
     {
         SecondVisualise();
-
-        if (flag != Arra[index])
-        {
-            flag = Arra[index];
-            StartCoroutine(SecondTL());
-        }
-        else
-        {
-            if (SecondText.text == message[index])
+        SecondText.text = message[index];
+        index++;
+        /*
+            if (flag != Arra[index])
             {
-                index++;
+                flag = Arra[index];
+                StartCoroutine(SecondTL());
             }
             else
             {
-                StopAllCoroutines();
-                SecondText.text = message[index];
+                if (SecondText.text == message[index])
+                {
+                    index++;
+                    DoDialogue(index);
+                }
+                else
+                {
+                    SecondText.text = "";
+                    StopAllCoroutines();
+                    SecondText.text = "";
+                    SecondText.text = message[index];
 
-                index++;
-            }
-            flag = 0;
-        }
+                    index++;
+                }
+                flag = 0;
+            }*/
 
     }
     // Start is called before the first frame update
