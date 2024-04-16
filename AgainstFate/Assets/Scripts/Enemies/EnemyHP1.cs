@@ -10,6 +10,7 @@ public class EnemyHP1 : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private EnemyLogic enemyLogic;
     public  GameObject enemydeathanim;
+    public bool IsDead=false;
 
     private void Start()
     {
@@ -40,7 +41,7 @@ public class EnemyHP1 : MonoBehaviour
 
     IEnumerator Death()
     {
-        
+        IsDead = true;
         yield return new WaitForSeconds(1f);
         GameObject.Destroy(gameObject);
 

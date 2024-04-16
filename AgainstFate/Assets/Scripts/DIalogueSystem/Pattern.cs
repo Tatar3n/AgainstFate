@@ -133,7 +133,14 @@ public class Pattern : MonoBehaviour
     }
     private void DoDialogue(int n)
     {
-        if (Arra[n]==1)
+        if (n >= Arra.Length)
+        {
+            IsEnd = true;
+            FirstClose();
+            SecondClose();
+            ThirdClose();
+        }
+        else if (Arra[n]==1)
         {
             SecondClose();
             ThirdClose();
@@ -157,12 +164,15 @@ public class Pattern : MonoBehaviour
     }
     IEnumerator FirstTL()
     {
+        flag = Arra[index];
         int k = 0;
         FirstText.text = "";
         for (int i = 0; i < message[index].Length; i++)
         {
             //Debug.Log(k++);
-            FirstText.text += message[index][i];
+            string sss = FirstText.text;
+            FirstText.text = "";
+            FirstText.text = sss + message[index][i];
             yield return new WaitForSeconds(TextSpeed);
         }
 
@@ -170,7 +180,9 @@ public class Pattern : MonoBehaviour
     private void DoFirst(int n)
     {
         FirstVisualise();
-
+        FirstText.text = message[index];
+        index++;
+        /*
         if (flag != Arra[index])
         {
             flag = Arra[index];
@@ -181,16 +193,19 @@ public class Pattern : MonoBehaviour
             if (FirstText.text == message[index])
             {
                 index++;
+                DoDialogue(index);
             }
             else
             {
+                //FirstText.text = "";
                 StopAllCoroutines();
+                FirstText.text = "";
                 FirstText.text = message[index];
-                
                 index++;
             }
             flag = 0;
-        }
+        */
+        
         
     }
 
@@ -198,11 +213,14 @@ public class Pattern : MonoBehaviour
     IEnumerator ThirdTL()
     {
         int k = 0;
+        flag = Arra[index];
         ThirdText.text = "";
         for (int i = 0; i < message[index].Length; i++)
         {
             //Debug.Log(k++);
-            ThirdText.text += message[index][i];
+            string sss = ThirdText.text;
+            ThirdText.text = "";
+            ThirdText.text = sss+message[index][i];
             yield return new WaitForSeconds(TextSpeed);
         }
 
@@ -210,7 +228,9 @@ public class Pattern : MonoBehaviour
     private void DoThird(int n)
     {
         ThirdVisualise();
-
+        ThirdText.text = message[index];
+    index++;    
+    /*
         if (flag != Arra[index])
         {
             flag = Arra[index];
@@ -221,27 +241,33 @@ public class Pattern : MonoBehaviour
             if (ThirdText.text == message[index])
             {
                 index++;
+                DoDialogue(index);
             }
             else
             {
+                ThirdText.text = "";
                 StopAllCoroutines();
+                ThirdText.text = "";
                 ThirdText.text = message[index];
 
                 index++;
             }
             flag = 0;
-        }
+        }*/
 
     }
 
     IEnumerator SecondTL()
     {
         int k = 0;
+        flag = Arra[index];
         SecondText.text = "";
         for (int i = 0; i < message[index].Length; i++)
         {
             //Debug.Log(k++);
-            SecondText.text += message[index][i];
+            string sss = SecondText.text;
+            SecondText.text = "";
+            SecondText.text = sss + message[index][i];
             yield return new WaitForSeconds(TextSpeed);
         }
 
@@ -249,7 +275,9 @@ public class Pattern : MonoBehaviour
     private void DoSecond(int n)
     {
         SecondVisualise();
-
+    SecondText.text = message[index];
+    index++;
+    /*
         if (flag != Arra[index])
         {
             flag = Arra[index];
@@ -260,16 +288,19 @@ public class Pattern : MonoBehaviour
             if (SecondText.text == message[index])
             {
                 index++;
+                DoDialogue(index);
             }
             else
             {
+                SecondText.text = "";
                 StopAllCoroutines();
+                SecondText.text = "";
                 SecondText.text = message[index];
 
                 index++;
             }
             flag = 0;
-        }
+        }*/
 
     }
     // Start is called before the first frame update
