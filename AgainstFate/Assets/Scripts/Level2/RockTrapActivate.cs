@@ -15,9 +15,12 @@ public class RockTrapActivate : MonoBehaviour
     int ii = 0;
     public static bool EndRockTrap = false;
     public AdaptedPatterForCapricorn d;
+    public GameObject savepoint;
     Respawn re;
+   
 
     private bool wait = true;
+
     private void Awake()
     {
         for (int i = 0; i < size; i++)
@@ -27,23 +30,35 @@ public class RockTrapActivate : MonoBehaviour
         }
         re = player.GetComponent<Respawn>();
     }
-
+   
     private void Update()
     {
         if (d.IsEnd && !EndRockTrap)
         {
             FallingGround.start = true;
-            f = true;
             StartCoroutine(TimeBeforeRockTRap());
+            if (Time.time - tt > 4 && !f)
+            {
+
+                f = true;
+                wait = false;
+                tt = Time.time;
+
+            }
             if (Time.time - t > 0.27 && f && ii < size && !wait)
             {
                 if (!CameraShake.startshake)
                     fl = true;
                 rb[ii].isKinematic = false;
                 ii++;
+              
                 t = Time.time;
-                if (ii == rb.Length - 1)
+              
+                if (ii == rb.Length - 1 && player.transform.position.x <= savepoint.transform.position.x || player.transform.position.x <= savepoint.transform.position.x)
+                {
+                    CameraShake.startshake = false;
                     EndRockTrap = true;
+                }
 
 
             }
@@ -60,6 +75,7 @@ public class RockTrapActivate : MonoBehaviour
                     rb[i].bodyType = RigidbodyType2D.Static;
 
                 }
+              
             }
             
            
@@ -68,7 +84,9 @@ public class RockTrapActivate : MonoBehaviour
 
         IEnumerator TimeBeforeRockTRap()
         {
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(3);
+
+            f = true;
             wait = false;
         }
 
