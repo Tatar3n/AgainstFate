@@ -334,7 +334,7 @@ public class PatternDialogueAfterDeath : MonoBehaviour
                 
             }
         }
-        else if (Input.GetKeyDown(KeyCode.N))
+        else if (Input.GetKeyDown(KeyCode.N) && !IsEnd)
         {
             //Debug.Log(index);
             if (index < message.Length)
