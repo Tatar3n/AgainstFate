@@ -22,7 +22,7 @@ public class EnemyHP1 : MonoBehaviour
         if (hp <= 0)
         {
             spriteRenderer.enabled = false;
-            enemyLogic.enabled = false;
+            enemyLogic.StopAllCoroutines();
             enemydeathanim.SetActive(true);
             StartCoroutine(Death());
         }

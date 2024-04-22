@@ -9,7 +9,8 @@ public class PatternDialogueAfterDeath : MonoBehaviour
     public bool IsStart = false;
     public string[] message;
     public int[] Arra;
-    public EnemyHP1 my_object;
+    public GameObject enemy;
+    private EnemyHP1 enemyhp;
     // FIRST HERO
     public Text FirstText;
     public GameObject FirstImage;
@@ -46,6 +47,10 @@ public class PatternDialogueAfterDeath : MonoBehaviour
     // public int count;// показывает, какой герой был вызван последним
     //private int[] Array = Arra; //Заполнять только 1 2 или 3!!! по длине должно быть как массив стрингов
     //private bool[Array.Length] BA = { false } * Array.Length;
+    private void Awake()
+    {
+        enemyhp = enemy.GetComponent<EnemyHP1>();
+    }
     private void FirstVisualise()
     {
         FirstImage.SetActive(true);
@@ -137,6 +142,7 @@ public class PatternDialogueAfterDeath : MonoBehaviour
     {
         if (n>=Arra.Length)
         {
+            Debug.Log("close all");
             IsEnd = true;
             FirstClose();
             SecondClose();
@@ -144,6 +150,7 @@ public class PatternDialogueAfterDeath : MonoBehaviour
         }
         else if (Arra[n] == 1)
         {
+            Debug.Log("first");
             SecondClose();
             ThirdClose();
             DoFirst(n);
@@ -151,6 +158,7 @@ public class PatternDialogueAfterDeath : MonoBehaviour
         }
         else if (Arra[n] == 2)
         {
+            Debug.Log("second");
             ThirdClose();
             FirstClose();
           
@@ -159,6 +167,7 @@ public class PatternDialogueAfterDeath : MonoBehaviour
         }
         else if (Arra[n] == 3)
         {
+            Debug.Log("third");
             FirstClose();
             SecondClose();
             DoThird(n);
@@ -315,8 +324,9 @@ public class PatternDialogueAfterDeath : MonoBehaviour
     {
         if (a)
         {
-            my_object = GameObject.Find("Maide").GetComponent<EnemyHP1>(); //assigning the object reference
-            if (my_object.IsDead)
+
+           
+            if (enemyhp.IsDead)
             {
                 a = false;
                 IsStart = true;
@@ -324,12 +334,13 @@ public class PatternDialogueAfterDeath : MonoBehaviour
                 
             }
         }
-        else if (Input.GetKeyDown(KeyCode.N))
+        else if (Input.GetKeyDown(KeyCode.N) && !IsEnd)
         {
             //Debug.Log(index);
-            Debug.Log(index +" guigiug " +flag);
             if (index < message.Length)
             {
+               
+                Debug.Log(index +" guigiug " +flag);
                 DoDialogue(index);
             }
             else

@@ -272,7 +272,7 @@ public class EnemyLogic : MonoBehaviour
 
     IEnumerator BeforeAttackDelay()
     {
-      
+        animator.Play(AttackAnim);
         yield return new WaitForSeconds(0.5f); // Задержка в 1 секунду
         isBeforeAttack = true;
        
@@ -292,7 +292,7 @@ public class EnemyLogic : MonoBehaviour
             else if (isBeforeAttack)
             {
                 Attack(goodObjs);
-                animator.Play(AttackAnim);
+                
             }
 
         }
