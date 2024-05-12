@@ -13,10 +13,14 @@ public class HP : MonoBehaviour
     public UnityEvent<float,float> damaging;
     private SpriteRenderer spriteRenderer;
     public PlayerHP playerHP;
-
+    public Sprite[] heartimages;
+    public GameObject heart;
+    private Image heartimage;
+    private int i = 0;
    
     private void Start()
     {
+        heartimage = heart.GetComponent<Image>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         Recovery();
         
@@ -26,11 +30,18 @@ public class HP : MonoBehaviour
         nowHP -= value;
         spriteRenderer.color = Color.red;
 
-        if(nowHP<=0)
+        if(nowHP<=0 && i < heartimages.Length-1)
         {
+            heartimage.sprite = heartimages[i + 1];
+            ++i;
             nowHP = 0;
             death.Invoke();
             White();
+        }
+        else if(i >= heartimages.Length-1)
+        {
+            i = -1;
+            //restart
         }
         else
         {
