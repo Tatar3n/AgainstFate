@@ -481,7 +481,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6822370780688305520, guid: dfec79d2916e2094b8704b4bf3864a53, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -220.79999
+      value: -220.7998
       objectReference: {fileID: 0}
     - target: {fileID: 8113498976874479099, guid: dfec79d2916e2094b8704b4bf3864a53, type: 3}
       propertyPath: m_Name
@@ -13269,6 +13269,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHP: 100
+  nowHP: 0
   death:
     m_PersistentCalls:
       m_Calls: []
@@ -15115,6 +15116,7 @@ GameObject:
   - component: {fileID: 1214492974}
   - component: {fileID: 1214492973}
   - component: {fileID: 1214492983}
+  - component: {fileID: 1214492984}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -15193,6 +15195,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHP: 100
+  nowHP: 0
   death:
     m_PersistentCalls:
       m_Calls:
@@ -15435,6 +15438,25 @@ MonoBehaviour:
   Waiting10sek: 0
   Duration: 12
   ShieldImage: {fileID: 1833231584}
+--- !u!114 &1214492984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1214492972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ca1e464a2e458446aa2912d344c0ef5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uiFill: {fileID: 2137162225}
+  player: {fileID: 1214492978}
+  Waiting10sek: 0
+  Duration: 15
+  hP: {fileID: 1214492976}
+  php: {fileID: 813612840}
+  HealingTouch: 20
 --- !u!1 &1231595396
 GameObject:
   m_ObjectHideFlags: 0
