@@ -1,5 +1,7 @@
 fileFormatVersion: 2
-guid: 2f3bc26d5c5e6944dbbe67ba9561f0e6
+
+guid: c6385ae1412fb314fb6106b0e53366e5
+
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -130,7 +132,9 @@ ScriptedImporter:
       y: 137
       width: 29
       height: 63
-    spriteID: f780de20cf3ab624a9a824a27e477451
+
+    spriteID: 67e632fe0179a2d4fbbc60ff6fb6ab5f
+
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -150,7 +154,9 @@ ScriptedImporter:
       y: 4
       width: 53
       height: 60
-    spriteID: fed2d5ef2a1a27348a814d3ab0ad1e9d
+
+    spriteID: 981bd653876f46c41be8905af43d0408
+
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -167,10 +173,12 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 4
-      y: 140
+
+      y: 72
       width: 50
       height: 56
-    spriteID: cc7b94ce506404241b296a9053578fb2
+    spriteID: b1bb6583c9926254d88061a83b3a9705
+
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -178,19 +186,23 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 140}
+
+    uvTransform: {x: 4, y: 72}
   - name: Fish_Run_Frame_3
     originalName: 
-    pivot: {x: 0.5686275, y: 0}
+    pivot: {x: 0.5217391, y: 0}
+
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
-      y: 72
-      width: 51
+
+      y: 136
+      width: 46
       height: 60
-    spriteID: 9bf6a3ec73920594d9d76b36f7d69d36
+    spriteID: 2b6fe05efd595864f8a06985ec9eb365
+
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -198,7 +210,9 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 72}
+
+    uvTransform: {x: 4, y: 136}
+
   - name: Fish_Run_Frame_4
     originalName: 
     pivot: {x: 0.6551724, y: 0}
@@ -210,7 +224,9 @@ ScriptedImporter:
       y: 134
       width: 29
       height: 59
-    spriteID: b03bced087d37b642b0f27fa72f0b471
+
+    spriteID: 62e33600b363fe342a0473b1ead6e7c8
+
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -230,7 +246,9 @@ ScriptedImporter:
       y: 69
       width: 31
       height: 57
-    spriteID: 9772d902c84987f489a5a6e0eef0efe2
+
+    spriteID: 387e7246c240d104cb3e1a67de99bbe7
+
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -250,7 +268,9 @@ ScriptedImporter:
       y: 4
       width: 32
       height: 57
-    spriteID: 03f826d3bba9a3f4b970a2defbffd55d
+
+    spriteID: 9a459640f5576e74a85ff0ff6d344866
+
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -270,7 +290,9 @@ ScriptedImporter:
       y: 68
       width: 41
       height: 61
-    spriteID: 79f5af35a8cd0564ea9122b3bcb81159
+
+    spriteID: ad6551d96448b3540b757d81ece91f90
+
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -290,7 +312,9 @@ ScriptedImporter:
       y: 4
       width: 49
       height: 56
-    spriteID: 02d136e40a2f75249882670803bee429
+
+    spriteID: 1583e07a7bb69f34ea56fc2a4941de38
+
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -310,7 +334,9 @@ ScriptedImporter:
       y: 69
       width: 29
       height: 57
-    spriteID: 162e21dedc0d29f45b7210e082303225
+
+    spriteID: 3e2b1f7a318901248bfb8f2c2bd99daf
+
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -330,7 +356,9 @@ ScriptedImporter:
       y: 4
       width: 30
       height: 57
-    spriteID: e876274cb64d45c45a524b2a6c2c1607
+
+    spriteID: 6df78e261fcc52d4aa90fcb293136739
+
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -355,7 +383,9 @@ ScriptedImporter:
         y: 0
         width: 29
         height: 63
-      spriteId: f780de20cf3ab624a9a824a27e477451
+
+      spriteId: 67e632fe0179a2d4fbbc60ff6fb6ab5f
+
     - name: Fish_Run_Frame_1
       frameIndex: 1
       cellRect:
@@ -363,7 +393,9 @@ ScriptedImporter:
         y: 0
         width: 53
         height: 60
-      spriteId: fed2d5ef2a1a27348a814d3ab0ad1e9d
+
+      spriteId: 981bd653876f46c41be8905af43d0408
+
     - name: Fish_Run_Frame_2
       frameIndex: 2
       cellRect:
@@ -371,15 +403,17 @@ ScriptedImporter:
         y: 0
         width: 50
         height: 56
-      spriteId: cc7b94ce506404241b296a9053578fb2
+
+      spriteId: b1bb6583c9926254d88061a83b3a9705
     - name: Fish_Run_Frame_3
       frameIndex: 3
       cellRect:
-        x: 5
+        x: 10
         y: 0
-        width: 51
+        width: 46
         height: 60
-      spriteId: 9bf6a3ec73920594d9d76b36f7d69d36
+      spriteId: 2b6fe05efd595864f8a06985ec9eb365
+
     - name: Fish_Run_Frame_4
       frameIndex: 4
       cellRect:
@@ -387,7 +421,9 @@ ScriptedImporter:
         y: 0
         width: 29
         height: 59
-      spriteId: b03bced087d37b642b0f27fa72f0b471
+
+      spriteId: 62e33600b363fe342a0473b1ead6e7c8
+
     - name: Fish_Run_Frame_5
       frameIndex: 5
       cellRect:
@@ -395,7 +431,9 @@ ScriptedImporter:
         y: 0
         width: 31
         height: 57
-      spriteId: 9772d902c84987f489a5a6e0eef0efe2
+
+      spriteId: 387e7246c240d104cb3e1a67de99bbe7
+
     - name: Fish_Run_Frame_6
       frameIndex: 6
       cellRect:
@@ -403,7 +441,9 @@ ScriptedImporter:
         y: 0
         width: 32
         height: 57
-      spriteId: 03f826d3bba9a3f4b970a2defbffd55d
+
+      spriteId: 9a459640f5576e74a85ff0ff6d344866
+
     - name: Fish_Run_Frame_7
       frameIndex: 7
       cellRect:
@@ -411,7 +451,9 @@ ScriptedImporter:
         y: 0
         width: 41
         height: 61
-      spriteId: 79f5af35a8cd0564ea9122b3bcb81159
+
+      spriteId: ad6551d96448b3540b757d81ece91f90
+
     - name: Fish_Run_Frame_8
       frameIndex: 8
       cellRect:
@@ -419,7 +461,9 @@ ScriptedImporter:
         y: 0
         width: 49
         height: 56
-      spriteId: 02d136e40a2f75249882670803bee429
+
+      spriteId: 1583e07a7bb69f34ea56fc2a4941de38
+
     - name: Fish_Run_Frame_9
       frameIndex: 9
       cellRect:
@@ -427,7 +471,9 @@ ScriptedImporter:
         y: 0
         width: 29
         height: 57
-      spriteId: 162e21dedc0d29f45b7210e082303225
+
+      spriteId: 3e2b1f7a318901248bfb8f2c2bd99daf
+
     - name: Fish_Run_Frame_10
       frameIndex: 10
       cellRect:
@@ -435,7 +481,9 @@ ScriptedImporter:
         y: 0
         width: 30
         height: 57
-      spriteId: e876274cb64d45c45a524b2a6c2c1607
+
+      spriteId: 6df78e261fcc52d4aa90fcb293136739
+
     linkedCells: []
     parentIndex: -1
   platformSettings: []

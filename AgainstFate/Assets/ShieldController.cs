@@ -57,6 +57,7 @@ public class ShieldController : MonoBehaviour
         ShieldImage.SetActive(true);
         yield return new WaitForSeconds(3f);
         ShieldImage.SetActive(false);
+        yield return new WaitForSeconds(Duration);
         Waiting10sek = false;
     }
    
@@ -72,5 +73,6 @@ public class ShieldController : MonoBehaviour
 
         }
         istimer = false;
+        
     }
 }
