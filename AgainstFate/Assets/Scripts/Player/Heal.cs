@@ -9,9 +9,15 @@ public class Heal : MonoBehaviour
 
 {
     [SerializeField] Image uiFill;
+
+    public GameObject colorful_pic;
+    public GameObject gray_pic;
     public PlayerMovement player;
+    public GameObject GrayCircle;
+    public GameObject GreenCircle;
     public bool Waiting10sek = false;
     private bool istimer = false;
+    private bool IsUsed = false;
     public int Duration;
     [SerializeField] public HP hP;
     [SerializeField] public PlayerHP php;
@@ -27,13 +33,14 @@ public class Heal : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyUp(KeyCode.Q) && !player.isDialog)
+        if (Input.GetKeyUp(KeyCode.Q) && !player.isDialog && !IsUsed)
         {
             if (!Waiting10sek)
             {
                
                 Waiting10sek = true;
-                Being(Duration);
+                //Being(Duration);
+                IsUsed= true;
                 StartCoroutine(DoHeal());
             }
             else
@@ -56,18 +63,18 @@ public class Heal : MonoBehaviour
     IEnumerator DoHeal()
     {
         //TODO анимацию отхила (что-нибудь с водой)
-        if (hP.maxHP  <hP.nowHP+HealingTouch)
-        {
-            hP.nowHP = hP.maxHP;
-        }
-        else
-        {
-            hP.nowHP += HealingTouch;
-        }
-        Debug.Log(hP.nowHP);
+        hP.nowHP = hP.maxHP;
         php.SetHealth(hP.nowHP);
         yield return new WaitForSeconds(1f);
+        MakeWaveBlackWhite();
         
+    }
+    private  void MakeWaveBlackWhite()
+    {
+        colorful_pic.SetActive(false);
+        gray_pic.SetActive(true);
+        GreenCircle.SetActive(false);
+        GrayCircle.SetActive(true);
     }
 
     IEnumerator UpdateTimer()
