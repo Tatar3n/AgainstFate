@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class HP : MonoBehaviour
 {
     public float maxHP;
-    private float nowHP;
+    public float nowHP;
 
     public UnityEvent death;
     public UnityEvent<float,float> damaging;

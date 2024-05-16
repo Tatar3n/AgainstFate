@@ -1,5 +1,7 @@
 fileFormatVersion: 2
+
 guid: cbb07f777dcf092428de0a1a8ce3bdd2
+
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -121,16 +123,20 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: Cancer_Run_Frame_0
     originalName: 
+
     pivot: {x: 0.47619048, y: 0}
+
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
+
       x: 93
       y: 126
       width: 21
       height: 54
     spriteID: 419c816b0b668144ca414009176cd6e4
+
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -138,7 +144,9 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
+
     uvTransform: {x: 93, y: 126}
+
   - name: Cancer_Run_Frame_1
     originalName: 
     pivot: {x: 0.53658533, y: 0}
@@ -150,7 +158,9 @@ ScriptedImporter:
       y: 68
       width: 41
       height: 55
+
     spriteID: 3b80e686d327d694e932d0fc6e0559e3
+
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -170,7 +180,9 @@ ScriptedImporter:
       y: 196
       width: 37
       height: 53
+
     spriteID: 370c7e5e167d5564887eab604128efef
+
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -190,7 +202,9 @@ ScriptedImporter:
       y: 66
       width: 31
       height: 51
+
     spriteID: bdee0163eba2ac4488dacbd91e6edd24
+
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -207,10 +221,12 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 53
+
       y: 125
       width: 26
       height: 53
     spriteID: 1b4c2eb7e8c01f64989e02936ef23361
+
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -218,7 +234,9 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
+
     uvTransform: {x: 53, y: 125}
+
   - name: Cancer_Run_Frame_5
     originalName: 
     pivot: {x: 0.47826087, y: 0}
@@ -227,10 +245,12 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 93
+
       y: 66
       width: 23
       height: 52
     spriteID: 193338a53a865d043a707a636926563c
+
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -238,7 +258,9 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
+
     uvTransform: {x: 93, y: 66}
+
   - name: Cancer_Run_Frame_6
     originalName: 
     pivot: {x: 0.5652174, y: 0}
@@ -247,10 +269,12 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 93
+
       y: 4
       width: 23
       height: 54
     spriteID: 4ceae7814edd2174eb774c6651d7ae55
+
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -258,7 +282,9 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
+
     uvTransform: {x: 93, y: 4}
+
   - name: Cancer_Run_Frame_7
     originalName: 
     pivot: {x: 0.6, y: 0}
@@ -270,7 +296,9 @@ ScriptedImporter:
       y: 131
       width: 35
       height: 57
+
     spriteID: 4d5507635e2da874fb0cef701cc05373
+
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -290,7 +318,9 @@ ScriptedImporter:
       y: 4
       width: 41
       height: 56
+
     spriteID: 32922903c4606fa4cba6ac7cdeb3a737
+
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -306,11 +336,13 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
+
       x: 53
       y: 186
       width: 24
       height: 55
     spriteID: c5ab797252a8c90459d1531c99c2e26e
+
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -318,7 +350,9 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
+
     uvTransform: {x: 53, y: 186}
+
   - name: Cancer_Run_Frame_10
     originalName: 
     pivot: {x: 0.5, y: 0}
@@ -330,7 +364,9 @@ ScriptedImporter:
       y: 4
       width: 32
       height: 54
+
     spriteID: 3d90902de32afcf44be0c6582a247235
+
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -353,9 +389,11 @@ ScriptedImporter:
       cellRect:
         x: 22
         y: 0
+
         width: 21
         height: 54
       spriteId: 419c816b0b668144ca414009176cd6e4
+
     - name: Cancer_Run_Frame_1
       frameIndex: 1
       cellRect:
@@ -363,7 +401,9 @@ ScriptedImporter:
         y: 0
         width: 41
         height: 55
+
       spriteId: 3b80e686d327d694e932d0fc6e0559e3
+
     - name: Cancer_Run_Frame_2
       frameIndex: 2
       cellRect:
@@ -371,7 +411,9 @@ ScriptedImporter:
         y: 0
         width: 37
         height: 53
+
       spriteId: 370c7e5e167d5564887eab604128efef
+
     - name: Cancer_Run_Frame_3
       frameIndex: 3
       cellRect:
@@ -379,7 +421,9 @@ ScriptedImporter:
         y: 0
         width: 31
         height: 51
+
       spriteId: bdee0163eba2ac4488dacbd91e6edd24
+
     - name: Cancer_Run_Frame_4
       frameIndex: 4
       cellRect:
@@ -387,7 +431,9 @@ ScriptedImporter:
         y: 0
         width: 26
         height: 53
+
       spriteId: 1b4c2eb7e8c01f64989e02936ef23361
+
     - name: Cancer_Run_Frame_5
       frameIndex: 5
       cellRect:
@@ -395,7 +441,9 @@ ScriptedImporter:
         y: 0
         width: 23
         height: 52
+
       spriteId: 193338a53a865d043a707a636926563c
+
     - name: Cancer_Run_Frame_6
       frameIndex: 6
       cellRect:
@@ -403,7 +451,9 @@ ScriptedImporter:
         y: 0
         width: 23
         height: 54
+
       spriteId: 4ceae7814edd2174eb774c6651d7ae55
+
     - name: Cancer_Run_Frame_7
       frameIndex: 7
       cellRect:
@@ -411,7 +461,9 @@ ScriptedImporter:
         y: 0
         width: 35
         height: 57
+
       spriteId: 4d5507635e2da874fb0cef701cc05373
+
     - name: Cancer_Run_Frame_8
       frameIndex: 8
       cellRect:
@@ -419,7 +471,9 @@ ScriptedImporter:
         y: 0
         width: 41
         height: 56
+
       spriteId: 32922903c4606fa4cba6ac7cdeb3a737
+
     - name: Cancer_Run_Frame_9
       frameIndex: 9
       cellRect:
@@ -427,7 +481,9 @@ ScriptedImporter:
         y: 0
         width: 24
         height: 55
+
       spriteId: c5ab797252a8c90459d1531c99c2e26e
+
     - name: Cancer_Run_Frame_10
       frameIndex: 10
       cellRect:
@@ -436,6 +492,7 @@ ScriptedImporter:
         width: 32
         height: 54
       spriteId: 3d90902de32afcf44be0c6582a247235
+
     linkedCells: []
     parentIndex: -1
   platformSettings: []

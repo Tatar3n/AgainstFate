@@ -1,5 +1,7 @@
 fileFormatVersion: 2
+
 guid: 1bae223f0d47a7848af7f0169519276e
+
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -130,7 +132,9 @@ ScriptedImporter:
       y: 4
       width: 46
       height: 55
+
     spriteID: bc82632ab1f0a7d4eb5d32afe4b006a5
+
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -150,7 +154,9 @@ ScriptedImporter:
       y: 69
       width: 36
       height: 54
+
     spriteID: f6b429b3bb0906c4886b58d5b4b64c4b
+
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -170,7 +176,9 @@ ScriptedImporter:
       y: 128
       width: 41
       height: 58
+
     spriteID: c9d5c405ed9922e4d9a7dd7e0ce11d81
+
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -190,7 +198,9 @@ ScriptedImporter:
       y: 194
       width: 41
       height: 57
+
     spriteID: 1664a57b7da24d641b597812ccf5225d
+
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -210,7 +220,9 @@ ScriptedImporter:
       y: 4
       width: 38
       height: 57
+
     spriteID: 67945f75e1cd9de43a232ac7fcfbbb5d
+
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -230,7 +242,9 @@ ScriptedImporter:
       y: 67
       width: 46
       height: 53
+
     spriteID: ce2431b83a5a191468e257b0dc8f56fa
+
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -255,7 +269,9 @@ ScriptedImporter:
         y: 0
         width: 46
         height: 55
+
       spriteId: bc82632ab1f0a7d4eb5d32afe4b006a5
+
     - name: Ophiuchus_Battle2_Frame_1
       frameIndex: 1
       cellRect:
@@ -263,7 +279,9 @@ ScriptedImporter:
         y: 0
         width: 36
         height: 54
+
       spriteId: f6b429b3bb0906c4886b58d5b4b64c4b
+
     - name: Ophiuchus_Battle2_Frame_2
       frameIndex: 2
       cellRect:
@@ -271,7 +289,9 @@ ScriptedImporter:
         y: 0
         width: 41
         height: 58
+
       spriteId: c9d5c405ed9922e4d9a7dd7e0ce11d81
+
     - name: Ophiuchus_Battle2_Frame_3
       frameIndex: 3
       cellRect:
@@ -279,7 +299,9 @@ ScriptedImporter:
         y: 0
         width: 41
         height: 57
+
       spriteId: 1664a57b7da24d641b597812ccf5225d
+
     - name: Ophiuchus_Battle2_Frame_4
       frameIndex: 4
       cellRect:
@@ -287,7 +309,9 @@ ScriptedImporter:
         y: 0
         width: 38
         height: 57
+
       spriteId: 67945f75e1cd9de43a232ac7fcfbbb5d
+
     - name: Ophiuchus_Battle2_Frame_5
       frameIndex: 5
       cellRect:
@@ -295,7 +319,9 @@ ScriptedImporter:
         y: 0
         width: 46
         height: 53
+
       spriteId: ce2431b83a5a191468e257b0dc8f56fa
+
     linkedCells: []
     parentIndex: -1
   platformSettings: []

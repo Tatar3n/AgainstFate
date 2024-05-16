@@ -1,5 +1,7 @@
 fileFormatVersion: 2
+
 guid: 812e0d81740aa014192b270fd61d8681
+
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -34,7 +36,9 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
+
     filterMode: 0
+
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -43,7 +47,9 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
+
   spriteMode: 2
+
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -72,7 +78,9 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
+
     textureCompression: 0
+
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -108,6 +116,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
+
     sprites:
     - serializedVersion: 2
       name: Fish_Run_0
@@ -340,6 +349,7 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+
     outline: []
     physicsShape: []
     bones: []
@@ -350,6 +360,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+
     nameFileIdTable:
       Fish_Run_0: -772092213
       Fish_Run_1: -1393970037
@@ -362,6 +373,7 @@ TextureImporter:
       Fish_Run_7: 1674923036
       Fish_Run_8: 1323862395
       Fish_Run_9: 558089646
+
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

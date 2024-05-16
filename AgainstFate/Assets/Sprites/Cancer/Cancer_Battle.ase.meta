@@ -1,5 +1,7 @@
 fileFormatVersion: 2
+
 guid: 069530f620f6e3d408b220a4a6346cde
+
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -121,16 +123,21 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: Cancer_Battle_Frame_0
     originalName: 
+
     pivot: {x: 0.6666667, y: 0}
+
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
+
       x: 52
       y: 4
       width: 33
       height: 54
     spriteID: a0bfb05c6a7e18c4fa005eff610ad95f
+
+    
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -138,19 +145,23 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
+
     uvTransform: {x: 52, y: 4}
   - name: Cancer_Battle_Frame_1
     originalName: 
     pivot: {x: 0.65625, y: 0}
+
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
+
       x: 52
       y: 128
       width: 32
       height: 54
     spriteID: d5c09f4f59638a140aa37f2862250ead
+
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -158,19 +169,23 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
+
     uvTransform: {x: 52, y: 128}
   - name: Cancer_Battle_Frame_2
     originalName: 
     pivot: {x: 0.75, y: 0}
+
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
+
       width: 40
       height: 54
     spriteID: 9a5adfef0279b5442bfb88aa5b3185a0
+
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -181,16 +196,20 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 4}
   - name: Cancer_Battle_Frame_3
     originalName: 
+
     pivot: {x: 0.71794873, y: 0}
+
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 66
+
       width: 39
       height: 54
     spriteID: f9f2e3f6bb4eb574b9d21e2ae14cab3a
+
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -201,16 +220,20 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 66}
   - name: Cancer_Battle_Frame_4
     originalName: 
+
     pivot: {x: 0.6363636, y: 0}
+
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
+
       x: 52
       y: 66
       width: 33
       height: 54
     spriteID: c44ae065071c3164eadef921f43dd5bd
+
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -218,19 +241,23 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
+
     uvTransform: {x: 52, y: 66}
   - name: Cancer_Battle_Frame_5
     originalName: 
     pivot: {x: 0.6857143, y: 0}
+
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 128
+
       width: 35
       height: 54
     spriteID: 9afc4839694a735478f2e9f33674041b
+
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -241,16 +268,20 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 128}
   - name: Cancer_Battle_Frame_6
     originalName: 
+
     pivot: {x: 0.6857143, y: 0}
+
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 190
+
       width: 35
       height: 54
     spriteID: b2d1ab88d35597a47819eef1f5b809ca
+
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -273,57 +304,71 @@ ScriptedImporter:
       cellRect:
         x: 10
         y: 0
+
         width: 33
         height: 54
       spriteId: a0bfb05c6a7e18c4fa005eff610ad95f
+
     - name: Cancer_Battle_Frame_1
       frameIndex: 1
       cellRect:
         x: 11
         y: 0
+
         width: 32
         height: 54
       spriteId: d5c09f4f59638a140aa37f2862250ead
+
     - name: Cancer_Battle_Frame_2
       frameIndex: 2
       cellRect:
         x: 2
         y: 0
+
         width: 40
         height: 54
       spriteId: 9a5adfef0279b5442bfb88aa5b3185a0
+
     - name: Cancer_Battle_Frame_3
       frameIndex: 3
       cellRect:
         x: 4
         y: 0
+
         width: 39
         height: 54
       spriteId: f9f2e3f6bb4eb574b9d21e2ae14cab3a
+
     - name: Cancer_Battle_Frame_4
       frameIndex: 4
       cellRect:
         x: 11
         y: 0
+
         width: 33
         height: 54
       spriteId: c44ae065071c3164eadef921f43dd5bd
+
     - name: Cancer_Battle_Frame_5
       frameIndex: 5
       cellRect:
         x: 8
         y: 0
+
         width: 35
         height: 54
       spriteId: 9afc4839694a735478f2e9f33674041b
+
     - name: Cancer_Battle_Frame_6
       frameIndex: 6
       cellRect:
         x: 8
         y: 0
+
         width: 35
         height: 54
       spriteId: b2d1ab88d35597a47819eef1f5b809ca
+
     linkedCells: []
     parentIndex: -1
   platformSettings: []

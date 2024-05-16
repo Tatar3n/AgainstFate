@@ -1,5 +1,7 @@
 fileFormatVersion: 2
+
 guid: 428912109b0c2fa4e889f42c5eb20fd4
+
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -34,7 +36,9 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
+
     filterMode: 0
+
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -43,7 +47,9 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
+
   spriteMode: 2
+
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -72,7 +78,9 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
+
     textureCompression: 0
+
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -108,6 +116,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
+
     sprites:
     - serializedVersion: 2
       name: Cancer_Battle_0
@@ -256,6 +265,7 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+
     outline: []
     physicsShape: []
     bones: []
@@ -266,6 +276,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+
     nameFileIdTable:
       Cancer_Battle_0: -1529805777
       Cancer_Battle_1: -515798176
@@ -274,6 +285,7 @@ TextureImporter:
       Cancer_Battle_4: 1717408386
       Cancer_Battle_5: -32068250
       Cancer_Battle_6: -1530525306
+
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
