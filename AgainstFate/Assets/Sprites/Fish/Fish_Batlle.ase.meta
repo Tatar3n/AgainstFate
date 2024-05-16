@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 55d1fedb61fd08b4e96fa734d04f759f
+guid: e88eb352233312e4fb003319734e8112
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -119,18 +119,38 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: Fish
+  - name: Fish_Batlle_Frame_0
     originalName: 
-    pivot: {x: 0.4482759, y: 0}
+    pivot: {x: 0.7058823, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 57
+      y: 4
+      width: 34
+      height: 60
+    spriteID: 09f0e07447d1c75418e6ac425638dd98
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 57, y: 4}
+  - name: Fish_Batlle_Frame_1
+    originalName: 
+    pivot: {x: 0.73333335, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 29
-      height: 63
-    spriteID: 6bb8e237044d17c4a951c8022b48b945
+      width: 45
+      height: 52
+    spriteID: fb6db37033206fd4e9b46cdc8d614a8a
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -139,23 +159,115 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
+  - name: Fish_Batlle_Frame_2
+    originalName: 
+    pivot: {x: 0.73333335, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 64
+      width: 45
+      height: 52
+    spriteID: 5c454c20bddb4a24698c400ba74dcfed
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 64}
+  - name: Fish_Batlle_Frame_3
+    originalName: 
+    pivot: {x: 0.6969697, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 57
+      y: 72
+      width: 33
+      height: 59
+    spriteID: b359a9cd30b3aca4599adc0b754ea763
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 57, y: 72}
+  - name: Fish_Batlle_Frame_4
+    originalName: 
+    pivot: {x: 0.52777773, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 124
+      width: 36
+      height: 63
+    spriteID: 236d44567d65e8d479c2428fdaf84c46
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 124}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -874510828
-    name: Fish
+    guid: 1178306105
+    name: Fish_Batlle
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: Fish
+    - name: Fish_Batlle_Frame_0
       frameIndex: 0
       cellRect:
-        x: 21
+        x: 10
         y: 0
-        width: 29
+        width: 34
+        height: 60
+      spriteId: 09f0e07447d1c75418e6ac425638dd98
+    - name: Fish_Batlle_Frame_1
+      frameIndex: 1
+      cellRect:
+        x: 1
+        y: 0
+        width: 45
+        height: 52
+      spriteId: fb6db37033206fd4e9b46cdc8d614a8a
+    - name: Fish_Batlle_Frame_2
+      frameIndex: 2
+      cellRect:
+        x: 1
+        y: 0
+        width: 45
+        height: 52
+      spriteId: 5c454c20bddb4a24698c400ba74dcfed
+    - name: Fish_Batlle_Frame_3
+      frameIndex: 3
+      cellRect:
+        x: 11
+        y: 0
+        width: 33
+        height: 59
+      spriteId: b359a9cd30b3aca4599adc0b754ea763
+    - name: Fish_Batlle_Frame_4
+      frameIndex: 4
+      cellRect:
+        x: 15
+        y: 0
+        width: 36
         height: 63
-      spriteId: 6bb8e237044d17c4a951c8022b48b945
+      spriteId: 236d44567d65e8d479c2428fdaf84c46
     linkedCells: []
     parentIndex: -1
   platformSettings: []

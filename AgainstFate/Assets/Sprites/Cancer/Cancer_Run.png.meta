@@ -1,7 +1,5 @@
 fileFormatVersion: 2
-
 guid: 782cc7e07b4283041b2c8ea164b41503
-
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -36,9 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-
     filterMode: 0
-
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -47,9 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-
   spriteMode: 2
-
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -78,9 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-
     textureCompression: 0
-
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -116,7 +108,6 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-
     sprites:
     - serializedVersion: 2
       name: Cancer_Run_0
@@ -133,8 +124,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 05e15f6025a1bbb46aebe9fc0a2227d1
-      internalID: -1342765972
+      spriteID: 18dfd2eec50b595408dfb851503b56b5
+      internalID: -1016359684
       vertices: []
       indices: 
       edges: []
@@ -154,8 +145,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4d9e91826b2e66f4e885085cc827866b
-      internalID: -572531976
+      spriteID: c8c43e864cb09634dbee9c462f9baf39
+      internalID: 1582826739
       vertices: []
       indices: 
       edges: []
@@ -175,8 +166,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 743fc9daf76f0d94ebffc3d587ef040f
-      internalID: 20778714
+      spriteID: 78e701cd342f02f4282227632d967200
+      internalID: -110117472
       vertices: []
       indices: 
       edges: []
@@ -196,8 +187,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b0a73683c41925e41b0da2bca66385bb
-      internalID: -1250302924
+      spriteID: a41332c797e87054fabee33d3a76d6c2
+      internalID: -1394410829
       vertices: []
       indices: 
       edges: []
@@ -217,8 +208,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d0f5be07f10f2e54d847637ff71c4209
-      internalID: -1753280408
+      spriteID: d6911cebbf4474b42a4cb08f2de3afb9
+      internalID: -1623089638
       vertices: []
       indices: 
       edges: []
@@ -238,8 +229,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3998a2231471b304e9fe0cb8ccaf7a55
-      internalID: 838547692
+      spriteID: 864eb1b7dfde4d74ba81c0f9f4449bfb
+      internalID: -1062415331
       vertices: []
       indices: 
       edges: []
@@ -259,8 +250,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dadb6280c08634741a7f2cc26f5caaa8
-      internalID: -1191314730
+      spriteID: d51676635cc19104f8b7947bdc58ea07
+      internalID: -903787990
       vertices: []
       indices: 
       edges: []
@@ -280,8 +271,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c1deefc0381766643b8adf995ef3b675
-      internalID: -1126561739
+      spriteID: 4779cf5b6af055f45b739cde69788f18
+      internalID: -699789003
       vertices: []
       indices: 
       edges: []
@@ -301,8 +292,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9607ec36224fff143b96c768cea18383
-      internalID: -1816212556
+      spriteID: 5e3f8216962b4d44999874c24abbb710
+      internalID: -1288885671
       vertices: []
       indices: 
       edges: []
@@ -322,8 +313,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4c0acea16bce7474280d910ee9e519b9
-      internalID: 463403366
+      spriteID: ca6f2ebe4ca938a469c86101eda5f480
+      internalID: 812170984
       vertices: []
       indices: 
       edges: []
@@ -343,13 +334,12 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d67c485eb483a0c42a89d308bc622acd
-      internalID: 156664915
+      spriteID: 4dca2a1877dcd0a43a948dc325cd1a18
+      internalID: -171987978
       vertices: []
       indices: 
       edges: []
       weights: []
-
     outline: []
     physicsShape: []
     bones: []
@@ -360,20 +350,18 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-
     nameFileIdTable:
-      Cancer_Run_0: -1342765972
-      Cancer_Run_1: -572531976
-      Cancer_Run_10: 156664915
-      Cancer_Run_2: 20778714
-      Cancer_Run_3: -1250302924
-      Cancer_Run_4: -1753280408
-      Cancer_Run_5: 838547692
-      Cancer_Run_6: -1191314730
-      Cancer_Run_7: -1126561739
-      Cancer_Run_8: -1816212556
-      Cancer_Run_9: 463403366
-
+      Cancer_Run_0: -1016359684
+      Cancer_Run_1: 1582826739
+      Cancer_Run_10: -171987978
+      Cancer_Run_2: -110117472
+      Cancer_Run_3: -1394410829
+      Cancer_Run_4: -1623089638
+      Cancer_Run_5: -1062415331
+      Cancer_Run_6: -903787990
+      Cancer_Run_7: -699789003
+      Cancer_Run_8: -1288885671
+      Cancer_Run_9: 812170984
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

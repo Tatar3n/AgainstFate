@@ -1,7 +1,5 @@
 fileFormatVersion: 2
-
 guid: 4082dff05dd02c7418f824fac3fdd918
-
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -36,9 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-
     filterMode: 0
-
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -47,9 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-
   spriteMode: 2
-
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -78,9 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-
     textureCompression: 0
-
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -116,7 +108,6 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-
     sprites:
     - serializedVersion: 2
       name: Ophiuchus_Battle2_0
@@ -133,8 +124,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 509c48d477dcf6b47811d420db8cf59c
-      internalID: 1566401624
+      spriteID: c4b7efcf58de7f24cba36ed86baa8928
+      internalID: 1783948627
       vertices: []
       indices: 
       edges: []
@@ -154,8 +145,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5f473a3308d72e94b99e2e94aa79d459
-      internalID: -1727981884
+      spriteID: a8ed2e38ea98d0848a2420902a5023e1
+      internalID: 1291067814
       vertices: []
       indices: 
       edges: []
@@ -175,8 +166,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 02fe53eb4cf263248a484abb8e60b0a2
-      internalID: -803737756
+      spriteID: a6ebf6d0033ec0d44bb7f7da2e47dcda
+      internalID: 1999629540
       vertices: []
       indices: 
       edges: []
@@ -196,8 +187,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 19f7e91b42597ff498c808bf29f422de
-      internalID: 1082571054
+      spriteID: e5180578370ebbb4f828c2f34a996248
+      internalID: 40154498
       vertices: []
       indices: 
       edges: []
@@ -217,8 +208,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9a0b4a95ab198c5449365462b015d254
-      internalID: 1005503744
+      spriteID: 019606c0526b0b94997ac9c6ef5ccae6
+      internalID: 566230966
       vertices: []
       indices: 
       edges: []
@@ -238,13 +229,12 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 63fd59896a5a6434286751998fcd5d56
-      internalID: -373436790
+      spriteID: f05b2cebec5862144abdbf7bcc322643
+      internalID: 1575284709
       vertices: []
       indices: 
       edges: []
       weights: []
-
     outline: []
     physicsShape: []
     bones: []
@@ -255,15 +245,13 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-
     nameFileIdTable:
-      Ophiuchus_Battle2_0: 1566401624
-      Ophiuchus_Battle2_1: -1727981884
-      Ophiuchus_Battle2_2: -803737756
-      Ophiuchus_Battle2_3: 1082571054
-      Ophiuchus_Battle2_4: 1005503744
-      Ophiuchus_Battle2_5: -373436790
-
+      Ophiuchus_Battle2_0: 1783948627
+      Ophiuchus_Battle2_1: 1291067814
+      Ophiuchus_Battle2_2: 1999629540
+      Ophiuchus_Battle2_3: 40154498
+      Ophiuchus_Battle2_4: 566230966
+      Ophiuchus_Battle2_5: 1575284709
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
