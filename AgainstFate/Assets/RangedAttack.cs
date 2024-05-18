@@ -28,12 +28,26 @@ public class RangedAttack : MonoBehaviour
                 enemy.GetComponent<Boss2HP>().GetDamage(damage);
             }
         }
+       
         else
         {
             var enemy = hitInfo.GetComponent<EnemyHP1>();
+            var enemy1 = hitInfo.GetComponent<GeminiHP>();
+            var enemy2 = hitInfo.GetComponent<LibraHP>();
             if (enemy != null)
             {
                 enemy.GetComponent<EnemyHP1>().GetDamage(damage);
+            }
+           
+            else if(enemy1!=null)
+            {
+               
+                enemy1.GetComponent<GeminiHP>().GetDamage(damage);
+            }
+            else if (enemy2 != null)
+            {
+
+                enemy2.GetComponent<LibraHP>().GetDamage(damage);
             }
         }
         

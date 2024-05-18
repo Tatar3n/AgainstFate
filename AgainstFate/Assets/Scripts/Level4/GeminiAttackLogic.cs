@@ -42,25 +42,32 @@ public class GeminiAttackLogic : MonoBehaviour
     public float damage = 25;
     private bool isBeforeAttack = false;
     public bool isStuck = false;
-    private bool move = false;
-
-    public GeminiAttackLogic gemini1;
     
+    public GameObject hp;
     public GameObject Bullet;
     public Transform bp;
+
+    private SpriteRenderer sp;
 
     private float updateTime = 2.5f;
     private float attackTime = 0.3f;
     int i = 0;
+
+    public enum WhoAreYou
+    {
+        boy,
+        girl
+    }
+    public WhoAreYou who;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         _boxCollider = GetComponent<BoxCollider2D>();
+        sp = GetComponent<SpriteRenderer>();
        
-        if(status != Status.rangedattack)
-            MoveToWaypoint();
+        
     }
 
     // метод следования к точке маршрута
@@ -69,24 +76,37 @@ public class GeminiAttackLogic : MonoBehaviour
 
         if (waypoints.Length == 0)
         {
-            move = false;
+            
             return;
         }
 
         Vector2 direction = (waypoints[currentWaypointIndex].position - transform.position).normalized;
         rb.velocity = new Vector2(direction.x * speed, rb.velocity.y);
-        move = true;
+        
     }
 
     void Update()
     {
-        if (player.transform.position.x - transform.position.x < 1 || player.transform.position.x - transform.position.x >3)
-        {
-           
+       
+        if (Mathf.Abs(player.transform.position.x - transform.position.x) < 1)
             status = Status.pursuit;
-            
+        else if(Mathf.Abs(player.transform.position.x - transform.position.x) >2 && who == WhoAreYou.boy)
+            status = Status.rangedattack;
+        else if(who == WhoAreYou.boy)
+            status = Status.pursuit;
+        else if (Mathf.Abs(player.transform.position.x - transform.position.x) > 2 && who == WhoAreYou.girl)
+            status = Status.pursuit;
+        else
+            status = Status.rangedattack;
+       
+
+        if (status == Status.pursuit)
+        {
+            rb.constraints = RigidbodyConstraints2D.None;
+            rb.freezeRotation = true;
+            Debug.Log(status);
             rb.bodyType = RigidbodyType2D.Dynamic;
-          
+            MoveToWaypoint();
             Pursuit();
             Flip();
             RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.right, visionRange, targetLayer);
@@ -104,31 +124,31 @@ public class GeminiAttackLogic : MonoBehaviour
             }
         }
        
-        else if(canAttack && IsGrounded())
+        else if(status == Status.rangedattack && canAttack)
         {
             StopAllCoroutines();
-            rb.bodyType = RigidbodyType2D.Static;
-            status = Status.rangedattack;
-            if (!move)
+            rb.constraints = RigidbodyConstraints2D.FreezePositionX;
+           
                 animator.Play(Defaultanim);
             if (player.position.x > transform.position.x )
             {              
-                transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));
+               transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));
             }
             if (player.position.x < transform.position.x && transform.rotation.y == 0)
-                transform.rotation = Quaternion.Euler(new Vector3(0, 180, 0));
-
+               transform.rotation = Quaternion.Euler(new Vector3(0, 180, 0));
+            hp.transform.rotation = Quaternion.Euler(new Vector3(0, 180, 0));
             updateTime -= Time.deltaTime;
             attackTime -= Time.deltaTime;
             if (updateTime < 0)
             {
                 if (attackTime < 0)
                 {
+                    Debug.Log("spawn");
                     Spawn();
                     attackTime = 0.3f;
                     i++;
                 }
-                if (i == 3)
+                if (i == 1)
                 {
                     updateTime = 2.5f;
                     i = 0;
@@ -148,6 +168,7 @@ public class GeminiAttackLogic : MonoBehaviour
             transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));
         else if (rb.velocity.x < 0)
             transform.rotation = Quaternion.Euler(new Vector3(0, 180, 0));
+        hp.transform.rotation = Quaternion.Euler(new Vector3(0, 180, 0));
     }
 
     public void Pursuit()
@@ -344,11 +365,14 @@ public class GeminiAttackLogic : MonoBehaviour
     }
     public void Spawn()
     {
-      //Instantiate(Bullet,new Vector3(bp.position.x,bp.position.y,bp.position.z),Quaternion.identity);
-       
+        //Instantiate(Bullet,new Vector3(bp.position.x,bp.position.y,bp.position.z),Quaternion.identity);
+        if (sp.enabled == false)
+            return;
         GameObject bull = Instantiate(Bullet, bp);
+        
         bull.transform.parent = null;
-       
+        
+
     }
     private void Attack(Collider2D[] goodObjs)
     {
