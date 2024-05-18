@@ -5,7 +5,7 @@ using UnityEngine;
 public class StaticBulletController : MonoBehaviour
 {
     public float speed;
-    [SerializeField] private Transform point;
+    public Transform point;
     private Rigidbody2D rb;
     private Vector3 direction;
 
@@ -17,12 +17,15 @@ public class StaticBulletController : MonoBehaviour
 
     void Update()
     {
-        rb.velocity = new Vector2(direction.x * speed, direction.y * speed);
+        rb.velocity = direction * speed;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("Walls") || collision.gameObject.layer == 6)
+        if (collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("Walls") || collision.gameObject.layer == 6)
+        {
+            Debug.Log("Пуля уничтожена");
             Destroy(gameObject);
+        }
     }
 }
