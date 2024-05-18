@@ -39,7 +39,14 @@ public class MeleeAttackController : MonoBehaviour
         foreach (Collider2D enemy in enemies)
         {
             if(enemy.gameObject.layer == 7)
-                enemy.GetComponent<EnemyHP1>().GetDamage(standartDamage);
+            {
+                if(enemy.GetComponent<EnemyHP1>()!=null)
+                    enemy.GetComponent<EnemyHP1>().GetDamage(standartDamage);
+                else if(enemy.GetComponent<GeminiHP>() != null)
+                    enemy.GetComponent<GeminiHP>().GetDamage(standartDamage);
+                else if (enemy.GetComponent<LibraHP>() != null)
+                    enemy.GetComponent<LibraHP>().GetDamage(standartDamage);
+            }
             else if (enemy.gameObject.layer == 8)
                 enemy.GetComponent<CaveThrowBullet>().isDead = true;
             else if (enemy.gameObject.layer == 9)
