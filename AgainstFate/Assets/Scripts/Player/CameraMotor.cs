@@ -8,6 +8,9 @@ public class CameraMotor : MonoBehaviour
     public Transform target;
     public float boundx;
     public float boundy;
+    public float yOffset = 0f;
+    public bool lockCameraY = false;
+    private float lastY;
 
     private void LateUpdate()
     {
@@ -25,20 +28,30 @@ public class CameraMotor : MonoBehaviour
                 delta.x = deltaX + boundx;
             }
         }
-
-        float deltaY = target.position.y - (transform.position.y);
-        if (deltaY > boundy || deltaY < -boundy)
+        if (!lockCameraY)
         {
-            if (transform.position.y < target.position.y)
+            float deltaY = target.position.y - (transform.position.y);
+            if (deltaY > boundy || deltaY < -boundy)
             {
-                delta.y = deltaY - boundy;
+                if (transform.position.y < target.position.y)
+                {
+                    delta.y = deltaY - boundy;
+                }
+                else
+                {
+                    delta.y = deltaY + boundy;
+                }
             }
-            else
-            {
-                delta.y = deltaY + boundy;
-            }
+            lastY = delta.y;
         }
+        else delta.y = lastY;
 
-        transform.position += new Vector3(delta.x, delta.y, 0);
+        if (!lockCameraY)
+            transform.position += new Vector3(delta.x, delta.y + yOffset, 0);
+        else
+        {
+            transform.position += new Vector3(delta.x, 0, 0);
+        }
+        
     }
 }

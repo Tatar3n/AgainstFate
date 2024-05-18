@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class Teleport : MonoBehaviour
 {
-    [SerializeField] private Transform whereTeleport;
+    [SerializeField] private Transform[] whereTeleport;
 	[SerializeField] private Transform player;
 
 	private void OnTriggerEnter2D(Collider2D collision)
 	{
 		if (collision.gameObject.CompareTag("Player_Fireball"))
 		{
-			player.position = whereTeleport.position;
+			player.position = whereTeleport[Random.Range(0, whereTeleport.Length)].position;
 		}
 	}
 }
