@@ -13,6 +13,7 @@ TagManager:
   - MUSIC_SOUNDS_TAG
   - Player_Fireball
   - MUSIC_SOUND_CHECK
+  - MPSS
   layers:
   - Default
   - TransparentFX
