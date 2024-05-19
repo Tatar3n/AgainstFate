@@ -82,7 +82,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Jump()
     {
-        if (IsGrounded() && Input.GetKeyDown(KeyCode.W))
+        if (IsGrounded() && (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.W)))
         {
             _rigidbody.velocity = new Vector2(_rigidbody.velocity.x, 0f);
             _rigidbody.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
