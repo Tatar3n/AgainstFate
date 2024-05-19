@@ -16117,6 +16117,7 @@ GameObject:
   - component: {fileID: 772677444}
   - component: {fileID: 772677443}
   - component: {fileID: 772677442}
+  - component: {fileID: 772677448}
   m_Layer: 5
   m_Name: SettingsMenu
   m_TagString: Untagged
@@ -16323,6 +16324,25 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &772677448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 772677441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0343ef2083e40c64b86950cdfeb2a34d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audio: {fileID: 772677442}
+  slider: {fileID: 1277463114}
+  text: {fileID: 0}
+  saveVolumeKey: MUSIC_SOUNDS_KEEP
+  sliderTag: MUSIC_SOUNDS_TAG
+  textVolumeTag: MUSIC_VOLUME_TEXT
+  volume: 1
 --- !u!1001 &773265777
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16497,6 +16517,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8600368831234740032, guid: c90d4fee6dadeb243b14a561e8fc6b70, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1903444969}
+    - targetCorrespondingSourceObject: {fileID: 8600368831234740032, guid: c90d4fee6dadeb243b14a561e8fc6b70, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1903444975}
     - targetCorrespondingSourceObject: {fileID: 2625304782505626174, guid: c90d4fee6dadeb243b14a561e8fc6b70, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1467681522}
@@ -19137,7 +19160,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07bffe9e9ee9bbb41aab1d83f6f67135, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  createdTag: MUSIC_PLAY_LEVEL_EXIST
+  createdTag: MUSIC_PLAY_VOLUME_EXIST
 --- !u!114 &1128284604
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19151,7 +19174,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audio: {fileID: 1128284605}
-  slider: {fileID: 0}
+  slider: {fileID: 1368472139}
   text: {fileID: 0}
   saveVolumeKey: MUSIC_PLAY_LEVEL
   sliderTag: MUSIC_VOLUME_SLIDER
@@ -26004,7 +26027,7 @@ GameObject:
   - component: {fileID: 1277463114}
   m_Layer: 5
   m_Name: Sounds
-  m_TagString: Untagged
+  m_TagString: MUSIC_SOUNDS_TAG
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -35835,6 +35858,25 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1903444975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1903444968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0343ef2083e40c64b86950cdfeb2a34d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audio: {fileID: 1903444970}
+  slider: {fileID: 1277463114}
+  text: {fileID: 0}
+  saveVolumeKey: MUSIC_SOUNDS_KEEP
+  sliderTag: MUSIC_SOUNDS_TAG
+  textVolumeTag: MUSIC_VOLUME_TEXT
+  volume: 1
 --- !u!1 &1919138921
 GameObject:
   m_ObjectHideFlags: 0
