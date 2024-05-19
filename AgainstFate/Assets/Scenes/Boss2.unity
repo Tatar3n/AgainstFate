@@ -31419,6 +31419,8 @@ MonoBehaviour:
   target: {fileID: 1564235654}
   boundx: 0
   boundy: 0
+  yOffset: 0
+  lockCameraY: 0
 --- !u!4 &1355219423
 Transform:
   m_ObjectHideFlags: 0
@@ -33196,6 +33198,12 @@ MonoBehaviour:
   player: {fileID: 1564235666}
   Waiting10sek: 0
   Duration: 10
+  animator: {fileID: 1564235670}
+--- !u!95 &1564235670 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 557087747354306902, guid: fa0575b1f250a274f9304c48b5d70cf9, type: 3}
+  m_PrefabInstance: {fileID: 1467580912}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1629351515
 GameObject:
   m_ObjectHideFlags: 0

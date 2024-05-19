@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class KillPlayer : MonoBehaviour
 {
@@ -10,7 +11,7 @@ public class KillPlayer : MonoBehaviour
 	{
 		if (transform.position.x > player.position.x)
 		{
-			player.gameObject.GetComponent<HP>().Damaging(5000f);
+			SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 		}
 	}
 }
