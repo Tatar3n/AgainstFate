@@ -1514,6 +1514,7 @@ GameObject:
   - component: {fileID: 370247606}
   - component: {fileID: 370247607}
   - component: {fileID: 370247608}
+  - component: {fileID: 370247609}
   m_Layer: 5
   m_Name: SettingsMenu
   m_TagString: MUSIC_SOUNDS_TAG
@@ -1688,10 +1689,23 @@ MonoBehaviour:
   audio: {fileID: 370247607}
   slider: {fileID: 2060614604}
   text: {fileID: 0}
-  saveVolumeKey: MUSIC_VOLUME_EXIST
+  saveVolumeKey: MUSIC_SOUND_CHECK
   sliderTag: MUSIC_SOUNDS_TAG
   textVolumeTag: MUSIC_VOLUME_TEXT
   volume: 0
+--- !u!114 &370247609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 370247603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07bffe9e9ee9bbb41aab1d83f6f67135, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  createdTag: MUSIC_PLAY_VOLUME_EXIST
 --- !u!1 &378167703
 GameObject:
   m_ObjectHideFlags: 0
@@ -4287,7 +4301,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 923582822}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1231466381}
+        m_TargetAssemblyTypeName: ChangeScene, Assembly-CSharp
+        m_MethodName: ChangeLevel
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 8
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1742983783}
+        m_TargetAssemblyTypeName: LoadingScreen, Assembly-CSharp
+        m_MethodName: Loading
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 8
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &923582822
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4301,7 +4339,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.34117648, g: 0.34117648, b: 0.34117648, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -4422,7 +4460,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.34117648, g: 0.34117648, b: 0.34117648, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -5231,6 +5269,7 @@ GameObject:
   - component: {fileID: 1247815390}
   - component: {fileID: 1247815389}
   - component: {fileID: 1247815388}
+  - component: {fileID: 1247815391}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -5327,7 +5366,7 @@ MonoBehaviour:
   audio: {fileID: 1247815390}
   slider: {fileID: 1332518754}
   text: {fileID: 0}
-  saveVolumeKey: MUSIC_VOLUME
+  saveVolumeKey: MUSIC_PLAY_LEVEL
   sliderTag: MUSIC_VOLUME_SLIDER
   textVolumeTag: MUSIC_VOLUME_TEXT
   volume: 0
@@ -5440,6 +5479,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1247815391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1247815384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07bffe9e9ee9bbb41aab1d83f6f67135, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  createdTag: MPSS
 --- !u!1 &1254798697
 GameObject:
   m_ObjectHideFlags: 0
@@ -5528,6 +5580,8 @@ GameObject:
   - component: {fileID: 1258929455}
   - component: {fileID: 1258929457}
   - component: {fileID: 1258929456}
+  - component: {fileID: 1258929458}
+  - component: {fileID: 1258929459}
   m_Layer: 5
   m_Name: MainMenu
   m_TagString: Untagged
@@ -5685,6 +5739,38 @@ MonoBehaviour:
     - {fileID: 8300000, guid: 87e2ba9025f201841ac8058cc87eb996, type: 3}
   - soundArray:
     - {fileID: 8300000, guid: 14af68cfdf3d6ee44bf0161caef34788, type: 3}
+--- !u!114 &1258929458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1258929452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0343ef2083e40c64b86950cdfeb2a34d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audio: {fileID: 1258929456}
+  slider: {fileID: 2060614604}
+  text: {fileID: 0}
+  saveVolumeKey: MUSIC_SOUND_CHECK
+  sliderTag: MUSIC_SOUNDS_TAG
+  textVolumeTag: MUSIC_VOLUME_TEXT
+  volume: 0
+--- !u!114 &1258929459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1258929452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07bffe9e9ee9bbb41aab1d83f6f67135, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  createdTag: MUSIC_PLAY_VOLUME_EXIST
 --- !u!1 &1274767926
 GameObject:
   m_ObjectHideFlags: 0
