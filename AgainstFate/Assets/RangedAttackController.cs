@@ -65,7 +65,7 @@ public class RangedAttackController : MonoBehaviour
     }
     IEnumerator DoAttack()
     {
-        yield return new WaitForSeconds(10f);
+        yield return new WaitForSeconds(Duration);
         Waiting10sek = false;
     }
      IEnumerator UpdateTimer()
