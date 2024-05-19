@@ -13,6 +13,7 @@ public class RangedAttackController : MonoBehaviour
     private bool istimer = false;
     public int Duration;
     private int remainingDuration;
+    public Animator animator;
     void Start()
     {
 
@@ -25,9 +26,11 @@ public class RangedAttackController : MonoBehaviour
             if (!Waiting10sek)
             {
                 //TODO Turning on the timer
-                
+
                 //animator.Play("Fireball");
-                Shoot();
+                animator.Play("FireAttack");
+                StartCoroutine(ReadyToAttack());
+               
                 Waiting10sek = true;
                 Being(Duration);
                 
@@ -55,9 +58,14 @@ public class RangedAttackController : MonoBehaviour
       
         Instantiate(bp,firePoint.position, firePoint.rotation);
     }
+    IEnumerator ReadyToAttack()
+    {
+        yield return new WaitForSeconds(0.3f);
+        Shoot();
+    }
     IEnumerator DoAttack()
     {
-        yield return new WaitForSeconds(10f);
+        yield return new WaitForSeconds(Duration);
         Waiting10sek = false;
     }
      IEnumerator UpdateTimer()

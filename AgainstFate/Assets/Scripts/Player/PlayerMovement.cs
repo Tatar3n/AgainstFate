@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -16,14 +17,13 @@ public class PlayerMovement : MonoBehaviour
     public float jumpForce; // множитель прыжка
 
     public bool isDialog = false;
-    // Start is called before the first frame update
+
     void Start()
     {
         _rigidbody = GetComponent<Rigidbody2D>(); // получаем объект Rigidbody игрока
         _boxCollider = GetComponent<BoxCollider2D>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (isDialog)
@@ -83,19 +83,27 @@ public class PlayerMovement : MonoBehaviour
     private void Jump()
     {
         if (IsGrounded() && Input.GetKeyDown(KeyCode.W))
+        {
+            _rigidbody.velocity = new Vector2(_rigidbody.velocity.x, 0f);
             _rigidbody.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+        }
     }
 
     public bool IsGrounded()
     {
+        bool isFall = Mathf.Abs(_rigidbody.velocity.y) > 0;
+
         float boxCollideSize = 0.08f;
-        // TOFIX Возможно придётся уменьшать ширину для checkGround, чтобы не прыгать от стен, если ничего не придумаем
-        RaycastHit2D checkGround = Physics2D.BoxCast(_boxCollider.bounds.center, _boxCollider.bounds.size, 0f, Vector2.down, boxCollideSize, platformLayerMask);
+        Vector2 boxCastSize = isFall
+            ? new Vector2(_boxCollider.bounds.size.x * 0.5f, _boxCollider.bounds.size.y)  
+            : _boxCollider.bounds.size;                                                   
+        RaycastHit2D checkGround = Physics2D.BoxCast(_boxCollider.bounds.center, boxCastSize, 0f, Vector2.down, boxCollideSize, platformLayerMask);
+
         Color rayColor = checkGround.collider ? Color.green : Color.red;
         Debug.DrawRay(_boxCollider.bounds.center + new Vector3(_boxCollider.bounds.extents.x, 0), Vector2.down * (_boxCollider.bounds.extents.y + boxCollideSize), rayColor);
         Debug.DrawRay(_boxCollider.bounds.center - new Vector3(_boxCollider.bounds.extents.x, 0), Vector2.down * (_boxCollider.bounds.extents.y + boxCollideSize), rayColor);
         Debug.DrawRay(_boxCollider.bounds.center - new Vector3(_boxCollider.bounds.extents.x, _boxCollider.bounds.extents.y + boxCollideSize), Vector2.right * (_boxCollider.bounds.extents.x * 2f), rayColor);
-        //Debug.Log(checkGround.collider);
+
         return checkGround.collider != null;
     }
 

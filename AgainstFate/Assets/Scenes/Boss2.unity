@@ -17261,9 +17261,29 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3928118736663620060, guid: e4c797e50395e644bb37d7ca827e2216, type: 3}
+      propertyPath: heart
+      value: 
+      objectReference: {fileID: 942273062}
+    - target: {fileID: 3928118736663620060, guid: e4c797e50395e644bb37d7ca827e2216, type: 3}
       propertyPath: playerHP
       value: 
       objectReference: {fileID: 1218132854}
+    - target: {fileID: 3928118736663620060, guid: e4c797e50395e644bb37d7ca827e2216, type: 3}
+      propertyPath: heartimages.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3928118736663620060, guid: e4c797e50395e644bb37d7ca827e2216, type: 3}
+      propertyPath: heartimages.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 6874269b147c8cf44854881891073dc8, type: 3}
+    - target: {fileID: 3928118736663620060, guid: e4c797e50395e644bb37d7ca827e2216, type: 3}
+      propertyPath: heartimages.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: 2a5764cacc34849469e89aa39984d403, type: 3}
+    - target: {fileID: 3928118736663620060, guid: e4c797e50395e644bb37d7ca827e2216, type: 3}
+      propertyPath: heartimages.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: 0b179015cafb7da43b42a2c87b62a49b, type: 3}
     - target: {fileID: 6165449947835531820, guid: e4c797e50395e644bb37d7ca827e2216, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -17360,6 +17380,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1218132854}
   m_SourcePrefab: {fileID: 100100000, guid: e4c797e50395e644bb37d7ca827e2216, type: 3}
+--- !u!1 &942273062 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 770886271081290162, guid: e4c797e50395e644bb37d7ca827e2216, type: 3}
+  m_PrefabInstance: {fileID: 942273061}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &949023578 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6000302608278930646, guid: c90d4fee6dadeb243b14a561e8fc6b70, type: 3}
@@ -32553,9 +32578,29 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3951183894319334131, guid: fa0575b1f250a274f9304c48b5d70cf9, type: 3}
+      propertyPath: heart
+      value: 
+      objectReference: {fileID: 942273062}
+    - target: {fileID: 3951183894319334131, guid: fa0575b1f250a274f9304c48b5d70cf9, type: 3}
       propertyPath: playerHP
       value: 
       objectReference: {fileID: 1218132854}
+    - target: {fileID: 3951183894319334131, guid: fa0575b1f250a274f9304c48b5d70cf9, type: 3}
+      propertyPath: heartimages.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3951183894319334131, guid: fa0575b1f250a274f9304c48b5d70cf9, type: 3}
+      propertyPath: heartimages.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 6874269b147c8cf44854881891073dc8, type: 3}
+    - target: {fileID: 3951183894319334131, guid: fa0575b1f250a274f9304c48b5d70cf9, type: 3}
+      propertyPath: heartimages.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: 2a5764cacc34849469e89aa39984d403, type: 3}
+    - target: {fileID: 3951183894319334131, guid: fa0575b1f250a274f9304c48b5d70cf9, type: 3}
+      propertyPath: heartimages.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: 0b179015cafb7da43b42a2c87b62a49b, type: 3}
     - target: {fileID: 7414595042767231155, guid: fa0575b1f250a274f9304c48b5d70cf9, type: 3}
       propertyPath: m_Name
       value: Player

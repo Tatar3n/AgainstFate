@@ -326,7 +326,7 @@ public class PatternDialogueAfterDeath : MonoBehaviour
         {
 
            
-            if (enemyhp.IsDead)
+            if ((enemyhp!=null && enemyhp.IsDead)  || enemy == null)
             {
                 a = false;
                 IsStart = true;

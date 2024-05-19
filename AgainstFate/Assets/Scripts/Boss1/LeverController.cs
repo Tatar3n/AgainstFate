@@ -14,7 +14,7 @@ public class LeverController : MonoBehaviour
     }
     private void OnTriggerStay2D(Collider2D collision)
 	{
-        if(collision.tag == "Player" && Input.GetKeyDown(KeyCode.E))
+        if(collision.tag == "Player" && Input.GetKey(KeyCode.E))
 		
         {
 			_fall = true;

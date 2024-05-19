@@ -7,16 +7,20 @@ using UnityEngine.UI;
 public class HP : MonoBehaviour
 {
     public float maxHP;
-    private float nowHP;
+    public float nowHP;
 
     public UnityEvent death;
     public UnityEvent<float,float> damaging;
     private SpriteRenderer spriteRenderer;
     public PlayerHP playerHP;
-
+    public Sprite[] heartimages;
+    public GameObject heart;
+    private Image heartimage;
+    private int i = 0;
    
     private void Start()
     {
+        heartimage = heart.GetComponent<Image>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         Recovery();
         
@@ -28,10 +32,15 @@ public class HP : MonoBehaviour
 
         if(nowHP<=0)
         {
+            i = (i + 1) % 3;
+            heartimage.sprite = heartimages[i];
+           
             nowHP = 0;
             death.Invoke();
             White();
+           
         }
+       
         else
         {
             damaging.Invoke(maxHP, nowHP);
