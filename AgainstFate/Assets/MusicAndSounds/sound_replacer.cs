@@ -27,22 +27,6 @@ public class SwitchAudio : MonoBehaviour
     {
         audioSources[boss1AudioIndex].Pause();
         audioSources[boss2AudioIndex].Pause();
-        
-        if (!leo_trigger.p.IsEnd)
-        {
-            audioSources[boss2AudioIndex].Pause();
-        }
-        else
-        {
-            audioSources[worldAudioIndex].Pause();
-            audioSources[boss2AudioIndex].UnPause();
-
-            if (leo_pattern.IsEnd)
-            {
-                audioSources[worldAudioIndex].UnPause();
-                audioSources[boss2AudioIndex].Pause();
-            }
-        }
 
         if (!aria_death_switch.IsEnd)
         {
@@ -59,8 +43,23 @@ public class SwitchAudio : MonoBehaviour
                 audioSources[boss1AudioIndex].Pause();
             }
         }
- 
-        
+
+        if (!leo_trigger.p.IsEnd)
+        {
+            audioSources[boss2AudioIndex].Pause();
+        }
+        else
+        {
+            audioSources[worldAudioIndex].Pause();
+            audioSources[boss2AudioIndex].UnPause();
+
+            if (leo_pattern.IsEnd)
+            {
+                audioSources[worldAudioIndex].UnPause();
+                audioSources[boss2AudioIndex].Pause();
+            }
+        }
+
     }
 
     private void Update()
