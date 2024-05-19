@@ -9,6 +9,7 @@ public class Boss3BehaviorScenarioUpdate : MonoBehaviour
 	[SerializeField] private Boss3HP bossHP;
 	[SerializeField] private Transform leftEdge;
 	[SerializeField] private Transform rightEdge;
+	public GameObject water;
 	public int stage = 0;
 
 	[SerializeField] private float speed = 2.0f; 
@@ -486,6 +487,8 @@ public class Boss3BehaviorScenarioUpdate : MonoBehaviour
 		StopAllCoroutines();
 		DeactivateGeyserAttack();
 		// активация воды
-		lastPlatform.gameObject.SetActive(true);
+		//lastPlatform.gameObject.transform.position = new Vector3(player.position.x, lastPlatform.gameObject.transform.position.y, player.position.z);
+		//lastPlatform.gameObject.SetActive(true);
+		//water.SetActive(true);
 	}
 }
