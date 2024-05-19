@@ -13,7 +13,7 @@ public class boss3BehaviorScenario : MonoBehaviour
 	}
 
 	[SerializeField] private Status status = Status.PASSIVEATTACK; // текущее состояние босса
-	public Boss2HP hp; // здоровье босса
+	public Boss3HP hp; // здоровье босса
 	[SerializeField] private float damage;
 	[SerializeField] private Transform[] spawnPoints;
 	private int lastSpawnPointIndex;
